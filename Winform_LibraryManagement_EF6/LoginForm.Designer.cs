@@ -155,6 +155,7 @@ namespace Winform_LibraryManagement_EF6
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(324, 26);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // optionsPanel
             // 
@@ -294,7 +295,9 @@ namespace Winform_LibraryManagement_EF6
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Library Management System";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LoginForm_FormClosed);
             this.Load += new System.EventHandler(this.LoginForm_Load);
+            this.Resize += new System.EventHandler(this.LoginForm_Resize);
             this.mainTableLayoutPanel.ResumeLayout(false);
             this.loginPanel.ResumeLayout(false);
             this.loginPanel.PerformLayout();

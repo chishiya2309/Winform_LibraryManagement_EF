@@ -282,15 +282,5 @@ namespace Winform_LibraryManagement_EF6
         {
             LoadData();
         }
-
-        private void panel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void categoriesGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

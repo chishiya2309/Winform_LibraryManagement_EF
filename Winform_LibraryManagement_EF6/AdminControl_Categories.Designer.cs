@@ -80,7 +80,7 @@ namespace Winform_LibraryManagement_EF6
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(839, 601);
             this.panel.TabIndex = 0;
-            this.panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Paint);
+            this.panel.Resize += new System.EventHandler(this.panel_Resize);
             // 
             // lblNoData
             // 
@@ -146,6 +146,7 @@ namespace Winform_LibraryManagement_EF6
             this.btnReload.TabIndex = 15;
             this.btnReload.Text = "Reload";
             this.btnReload.UseVisualStyleBackColor = false;
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
             // btnDeleteCategory
             // 
@@ -162,6 +163,7 @@ namespace Winform_LibraryManagement_EF6
             this.btnDeleteCategory.TabIndex = 14;
             this.btnDeleteCategory.Text = "Xóa danh mục";
             this.btnDeleteCategory.UseVisualStyleBackColor = false;
+            this.btnDeleteCategory.Click += new System.EventHandler(this.btnDeleteCategory_Click);
             // 
             // btnEditCategory
             // 
@@ -178,6 +180,7 @@ namespace Winform_LibraryManagement_EF6
             this.btnEditCategory.TabIndex = 13;
             this.btnEditCategory.Text = "Sửa danh mục";
             this.btnEditCategory.UseVisualStyleBackColor = false;
+            this.btnEditCategory.Click += new System.EventHandler(this.btnEditCategory_Click);
             // 
             // categoriesGridView
             // 
@@ -212,6 +215,7 @@ namespace Winform_LibraryManagement_EF6
             this.categoriesGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.categoriesGridView.Size = new System.Drawing.Size(608, 237);
             this.categoriesGridView.TabIndex = 12;
+            this.categoriesGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.categoriesGridView_CellFormatting);
             // 
             // MaDanhMuc
             // 
@@ -335,6 +339,7 @@ namespace Winform_LibraryManagement_EF6
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Tìm";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
@@ -342,6 +347,7 @@ namespace Winform_LibraryManagement_EF6
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(300, 25);
             this.txtSearch.TabIndex = 1;
+            this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
             // 
             // searchLabel
             // 

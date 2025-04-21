@@ -149,11 +149,6 @@ namespace Winform_LibraryManagement_EF6
 
         private void SaveStaffCredentials(string staffId)
         {
-            // TODO: Implement secure credential storage
-            // For demonstration purposes, we'll use Properties.Settings
-            // In a real application, use secure storage methods
-
-            // Example code (requires adding settings to project):
             Properties.Settings.Default.LastUsername = staffId;
             Properties.Settings.Default.RememberMe = true;
             Properties.Settings.Default.Save();
@@ -161,11 +156,6 @@ namespace Winform_LibraryManagement_EF6
 
         private void LoadSavedCredentials()
         {
-            // TODO: Implement loading saved credentials
-            // This would check if RememberMe was enabled previously
-            // and load the saved username
-
-            // Example code:
             if (Properties.Settings.Default.RememberMe)
             {
                 var controls = (LoginControls)this.Tag;
@@ -188,7 +178,5 @@ namespace Winform_LibraryManagement_EF6
         {
             Application.Exit();
         }
-
-
     }
 }

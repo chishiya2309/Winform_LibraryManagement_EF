@@ -3,6 +3,42 @@
   "WorkspaceRootPath": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\admincontrol_categories.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:admincontrol_categories.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\admincontrol_categories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:admincontrol_categories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\admincontrol_categories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:admincontrol_categories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\formeditcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:formeditcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\formeditcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:formeditcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|d:\\workspace\\wf_ef6\\winform_librarymanagement_ef6\\formeditcategory.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:formeditcategory.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|d:\\workspace\\wf_ef6\\winform_librarymanagement_ef6\\formaddcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:formaddcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,7 +47,7 @@
       "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:formaddcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|d:\\workspace\\wf_ef6\\winform_librarymanagement_ef6\\formaddcategory.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\formaddcategory.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:formaddcategory.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -21,7 +57,7 @@
       "AbsoluteMoniker": "D:0:0:{93083329-7B29-4734-92A5-5E3AAA12DEF8}|..\\BusinessAccessLayer\\BusinessAccessLayer.csproj|d:\\workspace\\wf_ef6\\businessaccesslayer\\dtos\\danhmucsachdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|d:\\workspace\\wf_ef6\\winform_librarymanagement_ef6\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
@@ -29,14 +65,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{93083329-7B29-4734-92A5-5E3AAA12DEF8}|..\\BusinessAccessLayer\\BusinessAccessLayer.csproj|d:\\workspace\\wf_ef6\\businessaccesslayer\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\admincontrol_categories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:admincontrol_categories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\admincontrol_categories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:admincontrol_categories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{93083329-7B29-4734-92A5-5E3AAA12DEF8}|..\\BusinessAccessLayer\\BusinessAccessLayer.csproj|d:\\workspace\\wf_ef6\\businessaccesslayer\\services\\idanhmucsachservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -83,24 +111,8 @@
       "AbsoluteMoniker": "D:0:0:{93083329-7B29-4734-92A5-5E3AAA12DEF8}|..\\BusinessAccessLayer\\BusinessAccessLayer.csproj|d:\\workspace\\wf_ef6\\businessaccesslayer\\services\\sachservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\formeditcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:formeditcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\formeditcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:formeditcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\adminmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:adminmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\admincontrol_categories.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:admincontrol_categories.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -132,14 +144,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{93083329-7B29-4734-92A5-5E3AAA12DEF8}|..\\BusinessAccessLayer\\BusinessAccessLayer.csproj|d:\\workspace\\wf_ef6\\businessaccesslayer\\services\\phieumuonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -215,7 +219,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -223,7 +227,121 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LoginForm.cs",
+              "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\LoginForm.cs [Design]",
+              "RelativeToolTip": "LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T04:13:43.993Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminControl_Categories.cs [Design]",
+              "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminControl_Categories.cs",
+              "RelativeDocumentMoniker": "AdminControl_Categories.cs",
+              "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminControl_Categories.cs [Design]",
+              "RelativeToolTip": "AdminControl_Categories.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T06:44:48.707Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminControl_Categories.cs",
+              "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminControl_Categories.cs",
+              "RelativeDocumentMoniker": "AdminControl_Categories.cs",
+              "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminControl_Categories.cs",
+              "RelativeToolTip": "AdminControl_Categories.cs",
+              "ViewState": "AgIAABQBAAAAAAAAAAAuwBsBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T06:51:21.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AdminControl_Categories.Designer.cs",
+              "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminControl_Categories.Designer.cs",
+              "RelativeDocumentMoniker": "AdminControl_Categories.Designer.cs",
+              "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminControl_Categories.Designer.cs*",
+              "RelativeToolTip": "AdminControl_Categories.Designer.cs*",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAYwFIAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T06:45:06.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginForm.Designer.cs",
+              "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\LoginForm.Designer.cs",
+              "RelativeDocumentMoniker": "LoginForm.Designer.cs",
+              "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\LoginForm.Designer.cs",
+              "RelativeToolTip": "LoginForm.Designer.cs",
+              "ViewState": "AgIAAB0BAAAAAAAAAAAYwCkBAABoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T04:14:19.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LoginForm.cs",
+              "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\LoginForm.cs",
+              "RelativeToolTip": "LoginForm.cs",
+              "ViewState": "AgIAAKYAAAAAAAAAAAAwwLMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T04:15:20.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormEditCategory.cs [Design]",
+              "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\FormEditCategory.cs",
+              "RelativeDocumentMoniker": "FormEditCategory.cs",
+              "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\FormEditCategory.cs [Design]",
+              "RelativeToolTip": "FormEditCategory.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T08:21:34.237Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormEditCategory.cs",
+              "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\FormEditCategory.cs",
+              "RelativeDocumentMoniker": "FormEditCategory.cs",
+              "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\FormEditCategory.cs",
+              "RelativeToolTip": "FormEditCategory.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAwwCEAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T08:22:51.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FormEditCategory.Designer.cs",
+              "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\FormEditCategory.Designer.cs",
+              "RelativeDocumentMoniker": "FormEditCategory.Designer.cs",
+              "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\FormEditCategory.Designer.cs",
+              "RelativeToolTip": "FormEditCategory.Designer.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAYwEQAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T17:57:43.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "FormAddCategory.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\FormAddCategory.cs",
               "RelativeDocumentMoniker": "FormAddCategory.cs",
@@ -236,32 +354,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DanhMucSachService.cs",
-              "DocumentMoniker": "D:\\Workspace\\WF_EF6\\BusinessAccessLayer\\Services\\DanhMucSachService.cs",
-              "RelativeDocumentMoniker": "..\\BusinessAccessLayer\\Services\\DanhMucSachService.cs",
-              "ToolTip": "D:\\Workspace\\WF_EF6\\BusinessAccessLayer\\Services\\DanhMucSachService.cs",
-              "RelativeToolTip": "..\\BusinessAccessLayer\\Services\\DanhMucSachService.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwCAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T03:42:09.024Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormAddCategory.cs [Design]",
-              "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\FormAddCategory.cs",
-              "RelativeDocumentMoniker": "FormAddCategory.cs",
-              "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\FormAddCategory.cs [Design]",
-              "RelativeToolTip": "FormAddCategory.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T08:16:54.441Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
               "Title": "FormAddCategory.Designer.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\FormAddCategory.Designer.cs",
               "RelativeDocumentMoniker": "FormAddCategory.Designer.cs",
@@ -269,12 +362,34 @@
               "RelativeToolTip": "FormAddCategory.Designer.cs",
               "ViewState": "AgIAAOQAAAAAAAAAAAAmwPcAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T17:24:29.478Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T17:24:29.478Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
+              "Title": "FormAddCategory.cs [Design]",
+              "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\FormAddCategory.cs",
+              "RelativeDocumentMoniker": "FormAddCategory.cs",
+              "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\FormAddCategory.cs [Design]",
+              "RelativeToolTip": "FormAddCategory.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T08:16:54.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DanhMucSachService.cs",
+              "DocumentMoniker": "D:\\Workspace\\WF_EF6\\BusinessAccessLayer\\Services\\DanhMucSachService.cs",
+              "RelativeDocumentMoniker": "..\\BusinessAccessLayer\\Services\\DanhMucSachService.cs",
+              "ToolTip": "D:\\Workspace\\WF_EF6\\BusinessAccessLayer\\Services\\DanhMucSachService.cs",
+              "RelativeToolTip": "..\\BusinessAccessLayer\\Services\\DanhMucSachService.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwCAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T03:42:09.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "DanhMucSachDTO.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\BusinessAccessLayer\\DTOs\\DanhMucSachDTO.cs",
               "RelativeDocumentMoniker": "..\\BusinessAccessLayer\\DTOs\\DanhMucSachDTO.cs",
@@ -282,12 +397,11 @@
               "RelativeToolTip": "..\\BusinessAccessLayer\\DTOs\\DanhMucSachDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T16:32:41.627Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-16T16:32:41.627Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 14,
               "Title": "App.config",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\App.config",
               "RelativeDocumentMoniker": "App.config",
@@ -300,7 +414,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 15,
               "Title": "App.config",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\DataAccessLayer\\App.config",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\App.config",
@@ -312,7 +426,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 16,
               "Title": "App.config",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\BusinessAccessLayer\\App.config",
               "RelativeDocumentMoniker": "..\\BusinessAccessLayer\\App.config",
@@ -320,35 +434,11 @@
               "RelativeToolTip": "..\\BusinessAccessLayer\\App.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-04-16T08:49:34.317Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-16T08:49:34.317Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AdminControl_Categories.cs",
-              "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminControl_Categories.cs",
-              "RelativeDocumentMoniker": "AdminControl_Categories.cs",
-              "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminControl_Categories.cs",
-              "RelativeToolTip": "AdminControl_Categories.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAApwG0AAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T06:51:21.361Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AdminControl_Categories.cs [Design]",
-              "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminControl_Categories.cs",
-              "RelativeDocumentMoniker": "AdminControl_Categories.cs",
-              "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminControl_Categories.cs [Design]",
-              "RelativeToolTip": "AdminControl_Categories.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T06:44:48.707Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "IDanhMucSachService.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\BusinessAccessLayer\\Services\\IDanhMucSachService.cs",
               "RelativeDocumentMoniker": "..\\BusinessAccessLayer\\Services\\IDanhMucSachService.cs",
@@ -360,7 +450,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "GenericReposity.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\DataAccessLayer\\DAL\\GenericReposity.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\DAL\\GenericReposity.cs",
@@ -372,7 +462,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\DataAccessLayer\\DAL\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\DAL\\UnitOfWork.cs",
@@ -384,7 +474,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
               "Title": "frmMain.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\frmMain.cs",
               "RelativeDocumentMoniker": "frmMain.cs",
@@ -396,7 +486,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 21,
               "Title": "AdminControl_Dashboard.cs [Design]",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminControl_Dashboard.cs",
               "RelativeDocumentMoniker": "AdminControl_Dashboard.cs",
@@ -407,7 +497,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 23,
               "Title": "QuanLyThuVienContext.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\DataAccessLayer\\DAL\\QuanLyThuVienContext.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\DAL\\QuanLyThuVienContext.cs",
@@ -419,7 +509,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "IReposity.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\DataAccessLayer\\DAL\\IReposity.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\DAL\\IReposity.cs",
@@ -431,7 +521,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "DbInitializer.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\DataAccessLayer\\DAL\\DbInitializer.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\DAL\\DbInitializer.cs",
@@ -443,7 +533,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 25,
               "Title": "PhieuMuon.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\DataAccessLayer\\Models\\PhieuMuon.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\Models\\PhieuMuon.cs",
@@ -455,7 +545,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 26,
               "Title": "ThanhVien.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\DataAccessLayer\\Models\\ThanhVien.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\Models\\ThanhVien.cs",
@@ -467,7 +557,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 27,
               "Title": "NhanVien.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\DataAccessLayer\\Models\\NhanVien.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\Models\\NhanVien.cs",
@@ -479,7 +569,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 28,
               "Title": "Sach.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\DataAccessLayer\\Models\\Sach.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\Models\\Sach.cs",
@@ -491,7 +581,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 29,
               "Title": "DanhMucSach.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\DataAccessLayer\\Models\\DanhMucSach.cs",
               "RelativeDocumentMoniker": "..\\DataAccessLayer\\Models\\DanhMucSach.cs",
@@ -503,7 +593,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 30,
               "Title": "SachService.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\BusinessAccessLayer\\Services\\SachService.cs",
               "RelativeDocumentMoniker": "..\\BusinessAccessLayer\\Services\\SachService.cs",
@@ -515,30 +605,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "FormEditCategory.cs",
-              "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\FormEditCategory.cs",
-              "RelativeDocumentMoniker": "FormEditCategory.cs",
-              "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\FormEditCategory.cs",
-              "RelativeToolTip": "FormEditCategory.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAEwBEAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T08:22:51.891Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "FormEditCategory.cs [Design]",
-              "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\FormEditCategory.cs",
-              "RelativeDocumentMoniker": "FormEditCategory.cs",
-              "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\FormEditCategory.cs [Design]",
-              "RelativeToolTip": "FormEditCategory.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T08:21:34.237Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 31,
               "Title": "AdminMainForm.cs [Design]",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminMainForm.cs",
               "RelativeDocumentMoniker": "AdminMainForm.cs",
@@ -549,30 +616,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "AdminControl_Categories.Designer.cs",
-              "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminControl_Categories.Designer.cs",
-              "RelativeDocumentMoniker": "AdminControl_Categories.Designer.cs",
-              "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminControl_Categories.Designer.cs",
-              "RelativeToolTip": "AdminControl_Categories.Designer.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAEwIIAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T06:45:06.471Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "LoginForm.cs [Design]",
-              "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\LoginForm.cs",
-              "RelativeDocumentMoniker": "LoginForm.cs",
-              "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\LoginForm.cs [Design]",
-              "RelativeToolTip": "LoginForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T04:13:43.993Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "frmMain.cs [Design]",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\frmMain.cs",
               "RelativeDocumentMoniker": "frmMain.cs",
@@ -583,7 +627,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "NhanVienService.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\BusinessAccessLayer\\Services\\NhanVienService.cs",
               "RelativeDocumentMoniker": "..\\BusinessAccessLayer\\Services\\NhanVienService.cs",
@@ -595,7 +639,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "IThanhVienService.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\BusinessAccessLayer\\Services\\IThanhVienService.cs",
               "RelativeDocumentMoniker": "..\\BusinessAccessLayer\\Services\\IThanhVienService.cs",
@@ -607,7 +651,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "IThongKeService.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\BusinessAccessLayer\\Services\\IThongKeService.cs",
               "RelativeDocumentMoniker": "..\\BusinessAccessLayer\\Services\\IThongKeService.cs",
@@ -619,7 +663,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "AdminControl_Dashboard.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminControl_Dashboard.cs",
               "RelativeDocumentMoniker": "AdminControl_Dashboard.cs",
@@ -631,7 +675,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "AdminMainForm.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminMainForm.cs",
               "RelativeDocumentMoniker": "AdminMainForm.cs",
@@ -643,7 +687,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "AdminMainForm.Designer.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminMainForm.Designer.cs",
               "RelativeDocumentMoniker": "AdminMainForm.Designer.cs",
@@ -655,7 +699,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "ThongKeService.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\BusinessAccessLayer\\Services\\ThongKeService.cs",
               "RelativeDocumentMoniker": "..\\BusinessAccessLayer\\Services\\ThongKeService.cs",
@@ -667,7 +711,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "PhieuMuonService.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\BusinessAccessLayer\\Services\\PhieuMuonService.cs",
               "RelativeDocumentMoniker": "..\\BusinessAccessLayer\\Services\\PhieuMuonService.cs",
@@ -679,31 +723,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "LoginForm.cs",
-              "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\LoginForm.cs",
-              "RelativeDocumentMoniker": "LoginForm.cs",
-              "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\LoginForm.cs",
-              "RelativeToolTip": "LoginForm.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAmwFAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T04:15:20.201Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "LoginForm.Designer.cs",
-              "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\LoginForm.Designer.cs",
-              "RelativeDocumentMoniker": "LoginForm.Designer.cs",
-              "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\LoginForm.Designer.cs",
-              "RelativeToolTip": "LoginForm.Designer.cs",
-              "ViewState": "AgIAAKoAAAAAAAAAAAArwLMAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T04:14:19.87Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -715,7 +735,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "AdminControl_Dashboard.Designer.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminControl_Dashboard.Designer.cs",
               "RelativeDocumentMoniker": "AdminControl_Dashboard.Designer.cs",
@@ -727,7 +747,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "frmMain.Designer.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\frmMain.Designer.cs",
               "RelativeDocumentMoniker": "frmMain.Designer.cs",
@@ -739,7 +759,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "ThanhVien.cs",
               "DocumentMoniker": "D:\\Workspace\\WF_EF6\\BusinessAccessLayer\\Services\\ThanhVien.cs",
               "RelativeDocumentMoniker": "..\\BusinessAccessLayer\\Services\\ThanhVien.cs",
@@ -751,7 +771,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "DanhMucSachService.cs",
               "DocumentMoniker": "D:\\Workspace\\BusinessAccessLayer\\Services\\DanhMucSachService.cs",
               "RelativeDocumentMoniker": "..\\..\\BusinessAccessLayer\\Services\\DanhMucSachService.cs",
@@ -762,7 +782,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "IPhieuMuonService.cs",
               "DocumentMoniker": "D:\\Workspace\\BusinessAccessLayer\\Services\\IPhieuMuonService.cs",
               "RelativeDocumentMoniker": "..\\..\\BusinessAccessLayer\\Services\\IPhieuMuonService.cs",
@@ -773,7 +793,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "INhanVienService.cs",
               "DocumentMoniker": "D:\\Workspace\\BusinessAccessLayer\\Services\\INhanVienService.cs",
               "RelativeDocumentMoniker": "..\\..\\BusinessAccessLayer\\Services\\INhanVienService.cs",
@@ -784,7 +804,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "IThanhVienService.cs",
               "DocumentMoniker": "D:\\Workspace\\BusinessAccessLayer\\Services\\IThanhVienService.cs",
               "RelativeDocumentMoniker": "..\\..\\BusinessAccessLayer\\Services\\IThanhVienService.cs",
@@ -795,7 +815,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "ISachService.cs",
               "DocumentMoniker": "D:\\Workspace\\BusinessAccessLayer\\Services\\ISachService.cs",
               "RelativeDocumentMoniker": "..\\..\\BusinessAccessLayer\\Services\\ISachService.cs",
@@ -806,7 +826,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "IDanhMucSachService.cs",
               "DocumentMoniker": "D:\\Workspace\\BusinessAccessLayer\\Services\\IDanhMucSachService.cs",
               "RelativeDocumentMoniker": "..\\..\\BusinessAccessLayer\\Services\\IDanhMucSachService.cs",
@@ -817,7 +837,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "Class1.cs",
               "DocumentMoniker": "D:\\Workspace\\BusinessAccessLayer\\Class1.cs",
               "RelativeDocumentMoniker": "..\\..\\BusinessAccessLayer\\Class1.cs",
@@ -828,7 +848,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 52,
               "Title": "App.config",
               "DocumentMoniker": "D:\\Workspace\\DataAccessLayer\\App.config",
               "RelativeDocumentMoniker": "..\\..\\DataAccessLayer\\App.config",
@@ -839,7 +859,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 53,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "D:\\Workspace\\DataAccessLayer\\DAL\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "..\\..\\DataAccessLayer\\DAL\\UnitOfWork.cs",
@@ -850,7 +870,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "GenericReposity.cs",
               "DocumentMoniker": "D:\\Workspace\\DataAccessLayer\\DAL\\GenericReposity.cs",
               "RelativeDocumentMoniker": "..\\..\\DataAccessLayer\\DAL\\GenericReposity.cs",
@@ -861,7 +881,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "IReposity.cs",
               "DocumentMoniker": "D:\\Workspace\\DataAccessLayer\\DAL\\IReposity.cs",
               "RelativeDocumentMoniker": "..\\..\\DataAccessLayer\\DAL\\IReposity.cs",
@@ -872,7 +892,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "QuanLyThuVienContext.cs",
               "DocumentMoniker": "D:\\Workspace\\DataAccessLayer\\DAL\\QuanLyThuVienContext.cs",
               "RelativeDocumentMoniker": "..\\..\\DataAccessLayer\\DAL\\QuanLyThuVienContext.cs",
@@ -883,7 +903,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 57,
               "Title": "PhieuMuon.cs",
               "DocumentMoniker": "D:\\Workspace\\DataAccessLayer\\Models\\PhieuMuon.cs",
               "RelativeDocumentMoniker": "..\\..\\DataAccessLayer\\Models\\PhieuMuon.cs",
@@ -894,7 +914,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 58,
               "Title": "ThanhVien.cs",
               "DocumentMoniker": "D:\\Workspace\\DataAccessLayer\\Models\\ThanhVien.cs",
               "RelativeDocumentMoniker": "..\\..\\DataAccessLayer\\Models\\ThanhVien.cs",
@@ -905,7 +925,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "NhanVien.cs",
               "DocumentMoniker": "D:\\Workspace\\DataAccessLayer\\Models\\NhanVien.cs",
               "RelativeDocumentMoniker": "..\\..\\DataAccessLayer\\Models\\NhanVien.cs",
@@ -916,7 +936,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 60,
               "Title": "Sach.cs",
               "DocumentMoniker": "D:\\Workspace\\DataAccessLayer\\Models\\Sach.cs",
               "RelativeDocumentMoniker": "..\\..\\DataAccessLayer\\Models\\Sach.cs",
@@ -927,7 +947,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 61,
               "Title": "DanhMucSach.cs",
               "DocumentMoniker": "D:\\Workspace\\DataAccessLayer\\Models\\DanhMucSach.cs",
               "RelativeDocumentMoniker": "..\\..\\DataAccessLayer\\Models\\DanhMucSach.cs",
