@@ -86,7 +86,7 @@ namespace Winform_LibraryManagement_EF6
             // 
             this.lblNoData.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoData.ForeColor = System.Drawing.Color.Red;
-            this.lblNoData.Location = new System.Drawing.Point(153, 339);
+            this.lblNoData.Location = new System.Drawing.Point(195, 337);
             this.lblNoData.Name = "lblNoData";
             this.lblNoData.Size = new System.Drawing.Size(268, 31);
             this.lblNoData.TabIndex = 17;
@@ -96,6 +96,8 @@ namespace Winform_LibraryManagement_EF6
             // 
             // MenuButton
             // 
+            this.MenuButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MenuButton.ColumnCount = 4;
             this.MenuButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.MenuButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -127,6 +129,7 @@ namespace Winform_LibraryManagement_EF6
             this.btnAddCategory.TabIndex = 7;
             this.btnAddCategory.Text = "Thêm danh mục mới";
             this.btnAddCategory.UseVisualStyleBackColor = false;
+            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
             // btnReload
             // 
@@ -182,6 +185,8 @@ namespace Winform_LibraryManagement_EF6
             this.categoriesGridView.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.categoriesGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.categoriesGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.categoriesGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.categoriesGridView.BackgroundColor = System.Drawing.Color.White;
             this.categoriesGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -302,6 +307,8 @@ namespace Winform_LibraryManagement_EF6
             // 
             // searchPanel
             // 
+            this.searchPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.searchPanel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.searchPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.searchPanel.Controls.Add(this.btnSearch);

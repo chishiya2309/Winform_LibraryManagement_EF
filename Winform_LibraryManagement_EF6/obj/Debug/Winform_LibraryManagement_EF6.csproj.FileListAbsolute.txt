@@ -23,3 +23,4 @@ D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\obj\Debug\Winform_LibraryManag
 D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\obj\Debug\Winform_LibraryManagement_EF6.LoginForm.resources
 D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\obj\Debug\Winform_LibraryManagement_EF6.AdminMainForm.resources
 D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\obj\Debug\Winform_LibraryManagement_EF6.AdminControl_Categories.resources
+D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\obj\Debug\Winform_LibraryManagement_EF6.FormEditCategory.resources

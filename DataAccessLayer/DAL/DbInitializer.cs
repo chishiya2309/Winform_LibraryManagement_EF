@@ -36,7 +36,7 @@ namespace DataAccessLayer.DAL
                     MaDanhMuc = "DM003",
                     TenDanhMuc = "Khoa học công nghệ",
                     MoTa = "Sách khoa học và công nghệ",
-                    DanhMucCha = null,
+                    DanhMucCha = "DM001",
                     SoLuongSach = 80,
                     NgayTao = DateTime.Now,
                     CapNhatLanCuoi = DateTime.Now,

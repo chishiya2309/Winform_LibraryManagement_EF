@@ -80,6 +80,18 @@
     <Compile Include="AdminMainForm.Designer.cs">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAddCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddCategory.Designer.cs">
+      <DependentUpon>FormAddCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditCategory.Designer.cs">
+      <DependentUpon>FormEditCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminMainForm.resx">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditCategory.resx">
+      <DependentUpon>FormEditCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

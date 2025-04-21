@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using BusinessAccessLayer.DTOs;
 using DataAccessLayer.DAL;
 using DataAccessLayer.Models;
 
@@ -15,9 +16,20 @@ namespace BusinessAccessLayer.Services
             _unitOfWork = new UnitOfWork();
         }
 
-        public IEnumerable<DanhMucSach> GetAllDanhMuc()
+        public IEnumerable<DanhMucSachDTO> GetAllDanhMucDTO()
         {
-            return _unitOfWork.DanhMucSachRepository.GetAll();
+            return _unitOfWork.DanhMucSachRepository.GetAll()
+                .Select(dm => new DanhMucSachDTO
+                {
+                    MaDanhMuc = dm.MaDanhMuc,
+                    TenDanhMuc = dm.TenDanhMuc,
+                    MoTa = dm.MoTa,
+                    DanhMucCha = dm.DanhMucCha,
+                    SoLuongSach = dm.SoLuongSach,
+                    NgayTao = dm.NgayTao,
+                    CapNhatLanCuoi = dm.CapNhatLanCuoi,
+                    TrangThai = dm.TrangThai
+                }).ToList();
         }
 
         public DanhMucSach GetDanhMucById(string maDanhMuc)
@@ -33,11 +45,11 @@ namespace BusinessAccessLayer.Services
         public void AddDanhMuc(DanhMucSach danhMuc)
         {
             if (danhMuc == null)
-                throw new ArgumentNullException("danhMuc");
+                throw new ArgumentNullException(nameof(danhMuc));
 
             danhMuc.NgayTao = DateTime.Now;
             danhMuc.CapNhatLanCuoi = DateTime.Now;
-            
+
             if (string.IsNullOrEmpty(danhMuc.TrangThai))
                 danhMuc.TrangThai = "Hoạt động";
 
@@ -48,7 +60,7 @@ namespace BusinessAccessLayer.Services
         public void UpdateDanhMuc(DanhMucSach danhMuc)
         {
             if (danhMuc == null)
-                throw new ArgumentNullException("danhMuc");
+                throw new ArgumentNullException(nameof(danhMuc));
 
             danhMuc.CapNhatLanCuoi = DateTime.Now;
 

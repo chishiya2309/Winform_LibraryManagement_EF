@@ -28,7 +28,7 @@ namespace Winform_LibraryManagement_EF6
         {
             try
             {
-                var danhMucs = _danhMucService.GetAllDanhMuc().ToList();
+                var danhMucs = _danhMucService.GetAllDanhMucDTO().ToList();
                 cmbDanhMuc.DataSource = danhMucs;
                 cmbDanhMuc.DisplayMember = "TenDanhMuc";
                 cmbDanhMuc.ValueMember = "MaDanhMuc";
