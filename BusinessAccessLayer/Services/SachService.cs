@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using BusinessAccessLayer.DTOs;
 using DataAccessLayer.DAL;
 using DataAccessLayer.Models;
 
@@ -146,5 +147,24 @@ namespace BusinessAccessLayer.Services
             var sach = _unitOfWork.SachRepository.GetById(maSach);
             return sach != null ? sach.KhaDung : 0;
         }
+
+        public IEnumerable<SachDTO> GetAllSachDTO()
+        {
+            return _unitOfWork.SachRepository.GetAll()
+                .Select(dm => new SachDTO
+                {
+                    MaSach = dm.MaSach,
+                    ISBN = dm.ISBN,
+                    TenSach = dm.TenSach,
+                    TacGia = dm.TacGia,
+                    MaDanhMuc = dm.MaDanhMuc,
+                    NamXuatBan = dm.NamXuatBan,
+                    NXB = dm.NXB,
+                    SoBan = dm.SoBan,
+                    KhaDung = dm.KhaDung,
+                    ViTri = dm.ViTri
+                }).ToList();
+        }
+
     }
 }

@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminControl_Books.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminControl_Books.Designer.cs">
+      <DependentUpon>AdminControl_Books.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminControl_Categories.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -80,11 +86,23 @@
     <Compile Include="AdminMainForm.Designer.cs">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAddBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddBook.Designer.cs">
+      <DependentUpon>FormAddBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAddCategory.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormAddCategory.Designer.cs">
       <DependentUpon>FormAddCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditBook.Designer.cs">
+      <DependentUpon>FormEditBook.cs</DependentUpon>
     </Compile>
     <Compile Include="FormEditCategory.cs">
       <SubType>Form</SubType>
@@ -106,6 +124,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminControl_Books.resx">
+      <DependentUpon>AdminControl_Books.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminControl_Categories.resx">
       <DependentUpon>AdminControl_Categories.cs</DependentUpon>
     </EmbeddedResource>

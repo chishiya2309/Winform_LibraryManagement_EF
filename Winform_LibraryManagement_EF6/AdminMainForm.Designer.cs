@@ -174,6 +174,7 @@ namespace Winform_LibraryManagement_EF6
             this.btnBooks.Text = "Quản lý sách";
             this.btnBooks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBooks.UseVisualStyleBackColor = true;
+            this.btnBooks.Click += new System.EventHandler(this.btnBooks_Click);
             // 
             // btnCategories
             // 
