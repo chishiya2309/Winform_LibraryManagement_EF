@@ -115,6 +115,9 @@
     <EmbeddedResource Include="AdminMainForm.resx">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAddCategory.resx">
+      <DependentUpon>FormAddCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEditCategory.resx">
       <DependentUpon>FormEditCategory.cs</DependentUpon>
     </EmbeddedResource>
