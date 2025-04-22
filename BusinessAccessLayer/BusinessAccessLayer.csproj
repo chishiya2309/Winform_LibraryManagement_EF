@@ -46,7 +46,6 @@
   <ItemGroup>
     <Compile Include="DTOs\DanhMucSachDTO.cs" />
     <Compile Include="DTOs\SachDTO.cs" />
-    <Compile Include="DTOs\ThanhVienDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DanhMucSachService.cs" />
     <Compile Include="Services\IDanhMucSachService.cs" />

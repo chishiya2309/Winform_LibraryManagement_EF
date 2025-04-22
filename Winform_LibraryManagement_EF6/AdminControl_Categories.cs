@@ -72,7 +72,7 @@ namespace Winform_LibraryManagement_EF6
         {
             try
             {
-                _danhMucs = _danhMucSachService.GetAllDanhMucDTO().ToList(); // Đúng kiểu
+                _danhMucs = _danhMucSachService.GetAllDanhMucDTO().ToList(); 
 
                 // Configure ComboBox column for parent categories
                 var danhMucChaColumn = categoriesGridView.Columns["DanhMucCha"] as DataGridViewComboBoxColumn;

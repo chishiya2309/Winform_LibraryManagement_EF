@@ -16,22 +16,10 @@ namespace BusinessAccessLayer.Services
             _unitOfWork = new UnitOfWork();
         }
 
-        public IEnumerable<ThanhVienDTO> GetAllThanhVienDTO()
+        public IEnumerable<ThanhVien> GetAllThanhVienDTO()
         {
-            return _unitOfWork.ThanhVienRepository.GetAll()
-                .Select(tv => new ThanhVienDTO
-                {
-                    MaThanhVien = tv.MaThanhVien,
-                    HoTen = tv.HoTen,
-                    GioiTinh = tv.GioiTinh,
-                    SoDienThoai = tv.SoDienThoai,
-                    Email = tv.Email,
-                    LoaiThanhVien = tv.LoaiThanhVien,
-                    NgayDangKy = tv.NgayDangKy,
-                    NgayHetHan = tv.NgayHetHan,
-                    TrangThai = tv.TrangThai
-
-                }).ToList();
+            return _unitOfWork.ThanhVienRepository.GetAll();
+                
         }
 
         public ThanhVien GetThanhVienById(string maThanhVien)
@@ -132,6 +120,11 @@ namespace BusinessAccessLayer.Services
         public IEnumerable<PhieuMuon> GetPhieuMuonByThanhVien(string maThanhVien)
         {
             return _unitOfWork.PhieuMuonRepository.Find(p => p.MaThanhVien == maThanhVien);
+        }
+
+        public IEnumerable<ThanhVien> GetAllThanhVien()
+        {
+            throw new NotImplementedException();
         }
     }
 }

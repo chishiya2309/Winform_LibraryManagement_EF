@@ -80,12 +80,6 @@
     <Compile Include="AdminControl_Dashboard.Designer.cs">
       <DependentUpon>AdminControl_Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminControl_Member.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AdminControl_Member.Designer.cs">
-      <DependentUpon>AdminControl_Member.cs</DependentUpon>
-    </Compile>
     <Compile Include="AdminMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,12 +98,6 @@
     <Compile Include="FormAddCategory.Designer.cs">
       <DependentUpon>FormAddCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAddMember.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormAddMember.Designer.cs">
-      <DependentUpon>FormAddMember.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormEditBook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,12 +109,6 @@
     </Compile>
     <Compile Include="FormEditCategory.Designer.cs">
       <DependentUpon>FormEditCategory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormEditMember.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormEditMember.Designer.cs">
-      <DependentUpon>FormEditMember.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -151,9 +133,6 @@
     <EmbeddedResource Include="AdminControl_Dashboard.resx">
       <DependentUpon>AdminControl_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminControl_Member.resx">
-      <DependentUpon>AdminControl_Member.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AdminMainForm.resx">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,9 +141,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddCategory.resx">
       <DependentUpon>FormAddCategory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormAddMember.resx">
-      <DependentUpon>FormAddMember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditBook.resx">
       <DependentUpon>FormEditBook.cs</DependentUpon>
