@@ -7,8 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DataAccessLayer;
-using BusinessAccessLayer;
 using BusinessAccessLayer.Services;
 using DataAccessLayer.Models;
 
@@ -19,6 +17,7 @@ namespace Winform_LibraryManagement_EF6
         private readonly ISachService _sachService;
         private readonly IDanhMucSachService _danhMucSachService;
         private List<DanhMucSach> _danhMucList;
+
         public FormAddBook()
         {
             InitializeComponent();
@@ -50,7 +49,7 @@ namespace Winform_LibraryManagement_EF6
 
         private void FormAddBook_Load(object sender, EventArgs e)
         {
-
+            // Form đã được tải dữ liệu trong constructor
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -75,23 +74,16 @@ namespace Winform_LibraryManagement_EF6
                     ViTri = txtViTri.Text.Trim()
                 };
 
-                /// Thêm sách thông qua service
-                try
-                {
-                    _sachService.AddSach(sach);
-                    MessageBox.Show("Thêm sách mới thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    DialogResult = DialogResult.OK;
-                    this.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi khi thêm sách: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Thêm sách thông qua service
+                _sachService.AddSach(sach);
 
-                }
+                MessageBox.Show("Thêm sách mới thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DialogResult = DialogResult.OK;
+                this.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi khi thêm sách: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -134,20 +126,28 @@ namespace Winform_LibraryManagement_EF6
                 return false;
             }
 
-            if (!int.TryParse(txtSoBan.Text, out _))
+            if (!int.TryParse(txtSoBan.Text, out int soBan) || soBan <= 0)
             {
-                MessageBox.Show("Số bản phải là số nguyên!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Số bản phải là số nguyên dương!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtSoBan.Focus();
                 return false;
             }
 
-            // Kiểm tra sách đã tồn tại chưa
+            // Kiểm tra mã sách và ISBN đã tồn tại chưa
             if (_sachService.SachExists(txtMaSach.Text.Trim()))
             {
                 MessageBox.Show("Mã sách đã tồn tại trong hệ thống!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtMaSach.Focus();
                 return false;
             }
+
+            if (_sachService.ISBNExists(txtISBN.Text.Trim()))
+            {
+                MessageBox.Show("ISBN đã tồn tại trong hệ thống!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtISBN.Focus();
+                return false;
+            }
+
             return true;
         }
 

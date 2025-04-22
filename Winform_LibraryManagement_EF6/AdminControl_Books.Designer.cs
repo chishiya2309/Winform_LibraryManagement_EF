@@ -348,6 +348,7 @@ namespace Winform_LibraryManagement_EF6
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Tìm";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 

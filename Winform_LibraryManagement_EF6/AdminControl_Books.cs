@@ -104,46 +104,46 @@ namespace Winform_LibraryManagement_EF6
 
         private void EditSelectedBook()
         {
-            //if (booksGridView.SelectedRows.Count == 0)
-            //{
-            //    MessageBox.Show("Vui lòng chọn sách cần chỉnh sửa!", "Thông báo",
-            //        MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    return;
-            //}
+            if (booksGridView.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn sách cần chỉnh sửa!", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
 
-            //try
-            //{
-            //    // Lấy dòng đã chọn
-            //    DataGridViewRow selectedRow = booksGridView.SelectedRows[0];
+            try
+            {
+                // Lấy dòng đã chọn
+                DataGridViewRow selectedRow = booksGridView.SelectedRows[0];
 
-            //    // Lấy mã sách để tìm kiếm trong DataTable
-            //    string maSach = selectedRow.Cells["MaSach"].Value.ToString();
+                // Lấy mã sách để tìm kiếm trong DataTable
+                string maSach = selectedRow.Cells["MaSach"].Value.ToString();
 
-            //    //Lấy thông tin sách từ service
-            //    Sach sach = _sachService.GetSachById(maSach);
+                //Lấy thông tin sách từ service
+                Sach sach = _sachService.GetSachById(maSach);
 
-            //    if (sach != null)
-            //    {
-            //        // Tạo và hiển thị form chỉnh sửa với thông tin sách đã chọn
-            //        FormEditBook formEditBook = new FormEditBook(sach);
+                if (sach != null)
+                {
+                    // Tạo và hiển thị form chỉnh sửa với thông tin sách đã chọn
+                    FormEditBook formEditBook = new FormEditBook(sach);
 
-            //        if (formEditBook.ShowDialog() == DialogResult.OK)
-            //        {
-            //            // Cập nhật dữ liệu trong DataGridView sau khi chỉnh sửa
-            //            LoadData();
-            //        }
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Không tìm thấy thông tin sách!", "Lỗi",
-            //            MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Lỗi khi chỉnh sửa thông tin sách: " + ex.Message, "Lỗi",
-            //        MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+                    if (formEditBook.ShowDialog() == DialogResult.OK)
+                    {
+                        // Cập nhật dữ liệu trong DataGridView sau khi chỉnh sửa
+                        LoadData();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy thông tin sách!", "Lỗi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi chỉnh sửa thông tin sách: " + ex.Message, "Lỗi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void xóaToolStripMenuItem_Click(object sender, EventArgs e)

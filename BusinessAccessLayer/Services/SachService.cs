@@ -80,8 +80,21 @@ namespace BusinessAccessLayer.Services
             if (sach.ISBN != sachHienTai.ISBN && ISBNExists(sach.ISBN))
                 throw new Exception("ISBN đã tồn tại trong hệ thống.");
 
+            // Cập nhật thông tin từ sách mới sang sách hiện tại thay vì tạo đối tượng mới
+            sachHienTai.ISBN = sach.ISBN;
+            sachHienTai.TenSach = sach.TenSach;
+            sachHienTai.TacGia = sach.TacGia;
+            sachHienTai.NamXuatBan = sach.NamXuatBan;
+            sachHienTai.NXB = sach.NXB;
+            sachHienTai.ViTri = sach.ViTri;
+            sachHienTai.KhaDung = sach.KhaDung;
+
+            // Xử lý thay đổi số lượng và danh mục
+            bool doiDanhMuc = sach.MaDanhMuc != sachHienTai.MaDanhMuc;
+            bool doiSoLuong = sach.SoBan != sachHienTai.SoBan;
+
             // Nếu thay đổi danh mục, cập nhật số lượng sách trong các danh mục
-            if (sach.MaDanhMuc != sachHienTai.MaDanhMuc)
+            if (doiDanhMuc)
             {
                 // Giảm số lượng sách trong danh mục cũ
                 var danhMucCu = _unitOfWork.DanhMucSachRepository.GetById(sachHienTai.MaDanhMuc);
@@ -98,9 +111,12 @@ namespace BusinessAccessLayer.Services
                     danhMucMoi.SoLuongSach += sach.SoBan;
                     _unitOfWork.DanhMucSachRepository.Update(danhMucMoi);
                 }
+
+                // Cập nhật mã danh mục
+                sachHienTai.MaDanhMuc = sach.MaDanhMuc;
             }
             // Nếu cùng danh mục nhưng thay đổi số lượng
-            else if (sach.SoBan != sachHienTai.SoBan)
+            else if (doiSoLuong)
             {
                 var danhMuc = _unitOfWork.DanhMucSachRepository.GetById(sach.MaDanhMuc);
                 if (danhMuc != null)
@@ -108,9 +124,12 @@ namespace BusinessAccessLayer.Services
                     danhMuc.SoLuongSach += (sach.SoBan - sachHienTai.SoBan);
                     _unitOfWork.DanhMucSachRepository.Update(danhMuc);
                 }
+
+                // Cập nhật số bản
+                sachHienTai.SoBan = sach.SoBan;
             }
 
-            _unitOfWork.SachRepository.Update(sach);
+            _unitOfWork.SachRepository.Update(sachHienTai);
             _unitOfWork.Save();
         }
 

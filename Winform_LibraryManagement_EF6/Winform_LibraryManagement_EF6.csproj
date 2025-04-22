@@ -142,6 +142,9 @@
     <EmbeddedResource Include="FormAddCategory.resx">
       <DependentUpon>FormAddCategory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormEditBook.resx">
+      <DependentUpon>FormEditBook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEditCategory.resx">
       <DependentUpon>FormEditCategory.cs</DependentUpon>
     </EmbeddedResource>
