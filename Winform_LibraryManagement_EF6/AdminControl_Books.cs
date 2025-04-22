@@ -217,17 +217,20 @@ namespace Winform_LibraryManagement_EF6
                 }
                 else
                 {
-                    // Tìm kiếm theo từ khóa
-                    searchTerm = searchTerm.ToLower();
-                    _sachList = _sachService.GetAllSachDTO().Where(s =>
-                        s.MaSach.ToLower().Contains(searchTerm) ||
-                        s.TenSach.ToLower().Contains(searchTerm) ||
-                        s.TacGia.ToLower().Contains(searchTerm) ||
-                        s.NXB.ToLower().Contains(searchTerm) ||
-                        s.NamXuatBan.ToString().Contains(searchTerm) ||
-                        s.ViTri.ToLower().Contains(searchTerm) ||
-                        s.ISBN.ToLower().Contains(searchTerm)
-                    ).ToList();
+                    var searchResults = _sachService.SearchSach(searchTerm);
+                    _sachList = searchResults.Select(s => new SachDTO
+                    {
+                        MaSach = s.MaSach,
+                        ISBN = s.ISBN,
+                        TenSach = s.TenSach,
+                        TacGia = s.TacGia,
+                        MaDanhMuc = s.MaDanhMuc,
+                        NamXuatBan = s.NamXuatBan,
+                        NXB = s.NXB,
+                        SoBan = s.SoBan,
+                        KhaDung = s.KhaDung,
+                        ViTri = s.ViTri
+                    }).ToList();
                 }
                 // Cập nhật DataGridView
                 booksGridView.DataSource = _sachList;

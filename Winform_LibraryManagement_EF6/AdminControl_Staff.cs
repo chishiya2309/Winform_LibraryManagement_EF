@@ -1,19 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Data;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataAccessLayer;
+using BusinessAccessLayer;
 using BusinessAccessLayer.Services;
 using DataAccessLayer.Models;
+using System.Data.Entity;
+using BusinessAccessLayer.DTOs;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Winform_LibraryManagement_EF6
 {
     public partial class AdminControl_Staff : UserControl
     {
         private INhanVienService _nhanVienService;
-        private List<NhanVien> _nhanViens;
- 
+        private List<NhanVienDTO> _nhanVienList;
+
         public AdminControl_Staff()
         {
             InitializeComponent();
@@ -68,24 +77,31 @@ namespace Winform_LibraryManagement_EF6
             try
             {
                 // Tìm kiếm nhân viên dựa trên từ khóa
-                _nhanViens = string.IsNullOrWhiteSpace(searchTerm)
-                    ? _nhanVienService.GetAllNhanVien().ToList()
-                    : _nhanVienService.SearchNhanVien(searchTerm).ToList();
-
-                // Cập nhật datagridview
-                staffGridView.DataSource = _nhanViens;
-
-                // Hiển thị / ẩn thông báo không có dữ liệu
-                if (_nhanViens.Count == 0)
+                if (string.IsNullOrWhiteSpace(searchTerm))
                 {
-                    lblNoData.Visible = true;
-                    staffGridView.Visible = false;
+                    _nhanVienList = _nhanVienService.GetAllNhanVienDTO().ToList();
                 }
                 else
                 {
-                    lblNoData.Visible = false;
-                    staffGridView.Visible = true;
+                    var searchResults = _nhanVienService.SearchNhanVien(searchTerm);
+                    _nhanVienList = searchResults.Select(nv => new NhanVienDTO
+                    {
+                        ID = nv.ID,
+                        HoTen = nv.HoTen,
+                        GioiTinh = nv.GioiTinh,
+                        ChucVu = nv.ChucVu,
+                        Email = nv.Email,
+                        SoDienThoai = nv.SoDienThoai,
+                        NgayVaoLam = nv.NgayVaoLam,
+                        TrangThai = nv.TrangThai
+                    }).ToList();
                 }
+
+                // Cập nhật DataGridView
+                staffGridView.DataSource = _nhanVienList;
+
+                // Hiển thị/ẩn thông báo không có dữ liệu
+                UpdateDataGridViewVisibility();
             }
             catch (Exception ex)
             {
@@ -93,15 +109,24 @@ namespace Winform_LibraryManagement_EF6
             }
         }
 
+        private void UpdateDataGridViewVisibility()
+        {
+            bool hasData = _nhanVienList != null && _nhanVienList.Any();
+            lblNoData.Visible = !hasData;
+            staffGridView.Visible = hasData;
+        }
+
         private void LoadData()
         {
             try
             {
-                // Lấy tất cả nhân viên từ service
-                _nhanViens = _nhanVienService.GetAllNhanVien().ToList();
+                //Lấy danh sách nhân viên từ service
+                _nhanVienList = _nhanVienService.GetAllNhanVienDTO().ToList();
 
-                // Đưa dữ liệu lên DataGridView
-                staffGridView.DataSource = _nhanViens;
+                staffGridView.DataSource = _nhanVienList; // Gán dữ liệu mới
+
+                // Cập nhật hiển thị
+                UpdateDataGridViewVisibility();
             }
             catch (Exception ex)
             {
@@ -121,7 +146,12 @@ namespace Winform_LibraryManagement_EF6
             }
         }
 
-        private void btnEditStaff_Click(object sender, EventArgs e)
+        private void staffPanel_Paint(object sender, PaintEventArgs e)
+        {
+            // Empty event handler
+        }
+
+        private void EditSelectedStaff()
         {
             if (staffGridView.SelectedRows.Count == 0)
             {
@@ -138,14 +168,13 @@ namespace Winform_LibraryManagement_EF6
                 // Lấy mã nhân viên để tìm kiếm
                 string maNhanVien = selectedRow.Cells["ID"].Value.ToString();
 
-                // Tìm nhân viên bằng ID
+                // Lấy thông tin nhân viên 
                 NhanVien nhanVien = _nhanVienService.GetNhanVienById(maNhanVien);
 
-                if (nhanVien != null)
+                if(nhanVien != null)
                 {
-                    // Tạo và hiển thị form chỉnh sửa với dữ liệu nhân viên đã chọn
+                    // Tạo và hiển thị form chỉnh sửa với nhân viên đã chọn
                     FormEditStaff formEditStaff = new FormEditStaff(nhanVien);
-
                     if (formEditStaff.ShowDialog() == DialogResult.OK)
                     {
                         // Cập nhật dữ liệu trong DataGridView
@@ -156,13 +185,18 @@ namespace Winform_LibraryManagement_EF6
                 {
                     MessageBox.Show("Không tìm thấy thông tin nhân viên!", "Lỗi",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                }    
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi khi chỉnh sửa thông tin nhân viên: " + ex.Message, "Lỗi",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnEditStaff_Click(object sender, EventArgs e)
+        {  
+            EditSelectedStaff();
         }
 
         private void btnDeleteStaff_Click(object sender, EventArgs e)

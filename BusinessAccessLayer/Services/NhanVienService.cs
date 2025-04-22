@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using BusinessAccessLayer.DTOs;
 using DataAccessLayer.DAL;
 using DataAccessLayer.Models;
 
@@ -18,6 +19,22 @@ namespace BusinessAccessLayer.Services
         public IEnumerable<NhanVien> GetAllNhanVien()
         {
             return _unitOfWork.NhanVienRepository.GetAll();
+        }
+
+        public IEnumerable<NhanVienDTO> GetAllNhanVienDTO()
+        {
+            return _unitOfWork.NhanVienRepository.GetAll()
+                .Select(nv => new NhanVienDTO
+                {
+                    ID = nv.ID,
+                    HoTen = nv.HoTen,
+                    GioiTinh = nv.GioiTinh,
+                    Email = nv.Email,
+                    SoDienThoai = nv.SoDienThoai,
+                    ChucVu = nv.ChucVu,
+                    NgayVaoLam = nv.NgayVaoLam,
+                    TrangThai = nv.TrangThai
+                }).ToList();
         }
 
         public NhanVien GetNhanVienById(string id)
