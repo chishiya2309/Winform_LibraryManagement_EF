@@ -34,7 +34,7 @@ namespace Winform_LibraryManagement_EF6
             menuMapping = new Dictionary<Button, UserControl>()
             {
                 { btnDashboard, new AdminControl_Dashboard() },
-                //{ btnStaff, new AdminControl_Staff() },
+                { btnStaff, new AdminControl_Staff() },
                 {btnBooks, new AdminControl_Books()},
                 //{btnMembers, new AdminControl_Member()},
                 {btnCategories, new  AdminControl_Categories()},
