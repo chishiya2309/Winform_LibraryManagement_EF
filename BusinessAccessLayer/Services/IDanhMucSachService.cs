@@ -9,6 +9,7 @@ namespace BusinessAccessLayer.Services
         IEnumerable<DanhMucSachDTO> GetAllDanhMucDTO();
         DanhMucSach GetDanhMucById(string maDanhMuc);
         IEnumerable<DanhMucSach> GetDanhMucCon(string maDanhMucCha);
+        IEnumerable<DanhMucSach> SearchDanhMucSach(string keyword);
         void AddDanhMuc(DanhMucSach danhMuc);
         void UpdateDanhMuc(DanhMucSach danhMuc);
         void DeleteDanhMuc(string maDanhMuc);

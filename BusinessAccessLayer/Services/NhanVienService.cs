@@ -16,11 +16,6 @@ namespace BusinessAccessLayer.Services
             _unitOfWork = new UnitOfWork();
         }
 
-        public IEnumerable<NhanVien> GetAllNhanVien()
-        {
-            return _unitOfWork.NhanVienRepository.GetAll();
-        }
-
         public IEnumerable<NhanVienDTO> GetAllNhanVienDTO()
         {
             return _unitOfWork.NhanVienRepository.GetAll()
@@ -46,6 +41,7 @@ namespace BusinessAccessLayer.Services
         {
             keyword = keyword.ToLower();
             return _unitOfWork.NhanVienRepository.Find(n =>
+                n.ID.ToLower().Contains(keyword) ||
                 n.HoTen.ToLower().Contains(keyword) ||
                 n.Email.ToLower().Contains(keyword) ||
                 n.SoDienThoai.Contains(keyword));
@@ -92,7 +88,16 @@ namespace BusinessAccessLayer.Services
             if (nhanVien.SoDienThoai != nhanVienHienTai.SoDienThoai && SoDienThoaiExists(nhanVien.SoDienThoai))
                 throw new Exception("Số điện thoại đã tồn tại trong hệ thống.");
 
-            _unitOfWork.NhanVienRepository.Update(nhanVien);
+            // Cập nhật các thuộc tính của entity hiện tại
+            nhanVienHienTai.HoTen = nhanVien.HoTen;
+            nhanVienHienTai.GioiTinh = nhanVien.GioiTinh;
+            nhanVienHienTai.ChucVu = nhanVien.ChucVu;
+            nhanVienHienTai.Email = nhanVien.Email;
+            nhanVienHienTai.SoDienThoai = nhanVien.SoDienThoai;
+            nhanVienHienTai.NgayVaoLam = nhanVien.NgayVaoLam;
+            nhanVienHienTai.TrangThai = nhanVien.TrangThai;
+
+            // Không cần gọi _unitOfWork.NhanVienRepository.Update(nhanVien) vì entity đã được tracked
             _unitOfWork.Save();
         }
 

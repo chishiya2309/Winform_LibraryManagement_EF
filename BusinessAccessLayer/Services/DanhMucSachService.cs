@@ -87,5 +87,14 @@ namespace BusinessAccessLayer.Services
         {
             return _unitOfWork.SachRepository.Find(s => s.MaDanhMuc == maDanhMuc).Count();
         }
+
+        public IEnumerable<DanhMucSach> SearchDanhMucSach(string keyword)
+        {
+            keyword = keyword.ToLower();
+            return _unitOfWork.DanhMucSachRepository.Find(dm =>
+                dm.MaDanhMuc.ToLower().Contains(keyword) ||
+                dm.MoTa.ToLower().Contains(keyword) ||
+                dm.TenDanhMuc.ToLower().Contains(keyword));
+        }
     }
 }

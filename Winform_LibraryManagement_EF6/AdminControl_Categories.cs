@@ -128,15 +128,40 @@ namespace Winform_LibraryManagement_EF6
 
         private void EditSelectedCategory()
         {
-            if (categoriesGridView.SelectedRows.Count == 0) return;
-
-            DataGridViewRow selectedRow = categoriesGridView.SelectedRows[0];
-            string maDanhMuc = selectedRow.Cells["MaDanhMuc"].Value.ToString();
-
-            FormEditCategory formEditCategory = new FormEditCategory(maDanhMuc);
-            if (formEditCategory.ShowDialog() == DialogResult.OK)
+            if (categoriesGridView.SelectedRows.Count == 0)
             {
-                LoadData();
+                MessageBox.Show("Vui lòng chọn danh mục cần chỉnh sửa!", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            
+            try
+            {
+                // Lấy dòng đã chọn
+                DataGridViewRow selectedRow = categoriesGridView.SelectedRows[0];
+
+                string maDanhMuc = selectedRow.Cells["MaDanhMuc"].Value.ToString();
+
+                DanhMucSach danhMuc = _danhMucSachService.GetDanhMucById(maDanhMuc);
+
+                if(danhMuc != null)
+                {
+                    FormEditCategory formEditCategory = new FormEditCategory(danhMuc);
+                    if (formEditCategory.ShowDialog() == DialogResult.OK)
+                    {
+                        LoadData();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy thông tin danh mục!", "Lỗi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi chỉnh sửa thông tin danh mục: " + ex.Message, "Lỗi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -170,15 +195,7 @@ namespace Winform_LibraryManagement_EF6
 
         private void btnEditCategory_Click(object sender, EventArgs e)
         {
-            if (categoriesGridView.SelectedRows.Count > 0)
-            {
-                EditSelectedCategory();
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng chọn một danh mục để chỉnh sửa!", "Thông báo",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            EditSelectedCategory();
         }
 
         private void btnDeleteCategory_Click(object sender, EventArgs e)
@@ -233,12 +250,18 @@ namespace Winform_LibraryManagement_EF6
                 }
                 else
                 {
-                    searchTerm = searchTerm.ToLower();
-                    _danhMucs = _danhMucSachService.GetAllDanhMucDTO()
-                        .Where(d => d.MaDanhMuc.ToLower().Contains(searchTerm) ||
-                                  d.TenDanhMuc.ToLower().Contains(searchTerm) ||
-                                  d.MoTa.ToLower().Contains(searchTerm))
-                        .ToList();
+                    var searchResults = _danhMucSachService.SearchDanhMucSach(searchTerm);
+                    _danhMucs = searchResults.Select(dto => new DanhMucSachDTO
+                    {
+                        MaDanhMuc = dto.MaDanhMuc,
+                        TenDanhMuc = dto.TenDanhMuc,
+                        MoTa = dto.MoTa,
+                        DanhMucCha = dto.DanhMucCha,
+                        SoLuongSach = dto.SoLuongSach,
+                        NgayTao = dto.NgayTao,
+                        CapNhatLanCuoi = dto.CapNhatLanCuoi,
+                        TrangThai = dto.TrangThai
+                    }).ToList();
                 }
 
                 categoriesGridView.DataSource = _danhMucs;

@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:formeditstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|d:\\workspace\\wf_ef6\\winform_librarymanagement_ef6\\formeditstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\formeditstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:formeditstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -336,8 +336,7 @@
               "RelativeToolTip": "AdminControl_Categories.cs",
               "ViewState": "AgIAAHsAAAAAAAAAAAAuwIAAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T06:51:21.361Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-16T06:51:21.361Z"
             },
             {
               "$type": "Document",
@@ -348,8 +347,7 @@
               "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\FormEditCategory.cs [Design]",
               "RelativeToolTip": "FormEditCategory.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T08:21:34.237Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-16T08:21:34.237Z"
             },
             {
               "$type": "Document",
@@ -361,8 +359,7 @@
               "RelativeToolTip": "FormEditStaff.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAYwCYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T12:51:23.932Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-22T12:51:23.932Z"
             },
             {
               "$type": "Document",
@@ -373,8 +370,7 @@
               "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminControl_Categories.cs [Design]",
               "RelativeToolTip": "AdminControl_Categories.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T06:44:48.707Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-16T06:44:48.707Z"
             },
             {
               "$type": "Document",
@@ -386,8 +382,7 @@
               "RelativeToolTip": "FormEditCategory.cs",
               "ViewState": "AgIAAJUAAAAAAAAAAAAswHwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T08:22:51.891Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-16T08:22:51.891Z"
             },
             {
               "$type": "Document",
@@ -399,8 +394,7 @@
               "RelativeToolTip": "FormEditBook.cs",
               "ViewState": "AgIAAKQAAAAAAAAAAAAuwFwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T01:49:14.377Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-22T01:49:14.377Z"
             },
             {
               "$type": "Document",
@@ -411,8 +405,7 @@
               "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\FormEditBook.cs [Design]",
               "RelativeToolTip": "FormEditBook.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T18:49:45.642Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-21T18:49:45.642Z"
             },
             {
               "$type": "Document",
@@ -424,8 +417,7 @@
               "RelativeToolTip": "AdminControl_Books.cs",
               "ViewState": "AgIAACYBAAAAAAAAAAAmwDMBAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T18:38:09.39Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T18:38:09.39Z"
             },
             {
               "$type": "Document",
@@ -436,8 +428,7 @@
               "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminControl_Books.cs [Design]",
               "RelativeToolTip": "AdminControl_Books.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T18:32:33.035Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-21T18:32:33.035Z"
             },
             {
               "$type": "Document",
@@ -449,8 +440,7 @@
               "RelativeToolTip": "AdminControl_Staff.cs",
               "ViewState": "AgIAAJ0AAAAAAAAAAAAAALAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T12:49:32.948Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-22T12:49:32.948Z"
             },
             {
               "$type": "Document",
@@ -461,8 +451,7 @@
               "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminControl_Staff.cs [Design]",
               "RelativeToolTip": "AdminControl_Staff.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T12:49:26.569Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-22T12:49:26.569Z"
             },
             {
               "$type": "Document",
@@ -474,8 +463,7 @@
               "RelativeToolTip": "FormEditStaff.Designer.cs",
               "ViewState": "AgIAAG0BAAAAAAAAAAAowIUBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T14:58:33.839Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-22T14:58:33.839Z"
             },
             {
               "$type": "Document",
@@ -734,8 +722,7 @@
               "RelativeToolTip": "AdminControl_Books.Designer.cs",
               "ViewState": "AgIAAFIBAAAAAAAAAAAYwF4BAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T18:32:38.26Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T18:32:38.26Z"
             },
             {
               "$type": "Document",
@@ -829,8 +816,7 @@
               "RelativeToolTip": "FormEditBook.Designer.cs",
               "ViewState": "AgIAAJABAAAAAAAAAAAUwLUBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T01:45:41.942Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-22T01:45:41.942Z"
             },
             {
               "$type": "Document",
@@ -865,8 +851,7 @@
               "RelativeToolTip": "AdminControl_Categories.Designer.cs",
               "ViewState": "AgIAAEYAAAAAAAAAAAAYwFIAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T06:45:06.471Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-16T06:45:06.471Z"
             },
             {
               "$type": "Document",
@@ -902,8 +887,7 @@
               "RelativeToolTip": "FormEditCategory.Designer.cs",
               "ViewState": "AgIAADgAAAAAAAAAAAAYwEQAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T17:57:43.163Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T17:57:43.163Z"
             },
             {
               "$type": "Document",
@@ -927,8 +911,7 @@
               "RelativeToolTip": "App.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-04-16T03:52:46.801Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-16T03:52:46.801Z"
             },
             {
               "$type": "Document",

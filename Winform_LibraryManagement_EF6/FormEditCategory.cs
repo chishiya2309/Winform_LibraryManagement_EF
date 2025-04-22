@@ -19,13 +19,14 @@ namespace Winform_LibraryManagement_EF6
         private readonly IDanhMucSachService _danhMucSachService;
         private List<DanhMucSach> _danhMucList;
         private string _maDanhMuc;
-        private DanhMucSach _danhMucSach;
+        private DanhMucSach _danhMucSachHienTai;
 
-        public FormEditCategory(string maDanhMuc)
+        public FormEditCategory(DanhMucSach danhMucSach)
         {
             InitializeComponent();
             _danhMucSachService = new DanhMucSachService();
-            _maDanhMuc = maDanhMuc;
+            _maDanhMuc = danhMucSach.MaDanhMuc;
+            _danhMucSachHienTai = danhMucSach;
             LoadData();
         }
 
@@ -39,29 +40,12 @@ namespace Winform_LibraryManagement_EF6
         {
             try
             {
-                //Lấy danh mục cần chỉnh sửa
-                _danhMucSach = _danhMucSachService.GetDanhMucById(_maDanhMuc);
-
-                if(_danhMucSach == null)
-                {
-                    MessageBox.Show("Không tìm thấy danh mục cần chỉnh sửa!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    this.DialogResult = DialogResult.Cancel;
-                    this.Close();
-                    return;
-                }    
-
                 //Lấy danh sách tất cả danh mục để hiển thị trong combobox danh mục cha
                 _danhMucList = _danhMucSachService.GetAllDanhMucDTO()
                     .Select(dto => new DanhMucSach
                     {
                         MaDanhMuc = dto.MaDanhMuc,
                         TenDanhMuc = dto.TenDanhMuc,
-                        MoTa = dto.MoTa,
-                        DanhMucCha = dto.DanhMucCha,
-                        SoLuongSach = dto.SoLuongSach,
-                        NgayTao = dto.NgayTao,
-                        CapNhatLanCuoi = dto.CapNhatLanCuoi,
-                        TrangThai = dto.TrangThai
                     }).ToList();
 
                 // Tạo bản sao để không ảnh hưởng đến dữ liệu gốc
@@ -79,20 +63,20 @@ namespace Winform_LibraryManagement_EF6
                 cmbDanhMucCha.ValueMember = "MaDanhMuc";
 
                 //Điền dữ liệu vào các control
-                txtMaDanhMuc.Text = _danhMucSach.MaDanhMuc;
+                txtMaDanhMuc.Text = _danhMucSachHienTai.MaDanhMuc;
                 txtMaDanhMuc.ReadOnly = true; // Không cho phép sửa mã danh mục
-                txtTenDanhMuc.Text = _danhMucSach.TenDanhMuc;
-                txtMoTa.Text = _danhMucSach.MoTa;
+                txtTenDanhMuc.Text = _danhMucSachHienTai.TenDanhMuc;
+                txtMoTa.Text = _danhMucSachHienTai.MoTa;
 
                 // Chọn danh mục cha
-                if (string.IsNullOrEmpty(_danhMucSach.DanhMucCha))
+                if (string.IsNullOrEmpty(_danhMucSachHienTai.DanhMucCha))
                 {
                     cmbDanhMucCha.SelectedIndex = 0; // Chọn "Không có danh mục cha"
                 }
                 else
                 {
                     //Tìm index của danh mục cha trong danh sách
-                    var selectedIndex  = displayList.FindIndex(d => d.MaDanhMuc == _danhMucSach.DanhMucCha);
+                    var selectedIndex  = displayList.FindIndex(d => d.MaDanhMuc == _danhMucSachHienTai.DanhMucCha);
                     if(selectedIndex >= 0)
                     {
                         cmbDanhMucCha.SelectedIndex = selectedIndex;
@@ -103,12 +87,12 @@ namespace Winform_LibraryManagement_EF6
                     }
                 } 
                     
-                txtSoLuongSach.Text = _danhMucSach.SoLuongSach.ToString();
-                cmbTrangThai.SelectedIndex = (_danhMucSach.TrangThai == "Hoạt động") ? 0 : 1;
+                txtSoLuongSach.Text = _danhMucSachHienTai.SoLuongSach.ToString();
+                cmbTrangThai.SelectedIndex = (_danhMucSachHienTai.TrangThai == "Hoạt động") ? 0 : 1;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi khi tải dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi khi tải danh mục: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.DialogResult = DialogResult.Cancel;
                 this.Close();
             }
@@ -128,8 +112,12 @@ namespace Winform_LibraryManagement_EF6
             }
             try
             {
-                string tenDanhMuc = txtTenDanhMuc.Text.Trim();
-                string moTa = txtMoTa.Text.Trim();
+                _danhMucSachHienTai.MaDanhMuc = txtMaDanhMuc.Text.Trim();
+                _danhMucSachHienTai.TenDanhMuc = txtTenDanhMuc.Text.Trim();
+                _danhMucSachHienTai.MoTa = txtMoTa.Text.Trim();
+                _danhMucSachHienTai.DanhMucCha = cmbDanhMucCha.SelectedValue as string;
+                _danhMucSachHienTai.SoLuongSach = Convert.ToInt32(txtSoLuongSach.Text.Trim());
+                _danhMucSachHienTai.TrangThai = cmbTrangThai.SelectedItem.ToString();
 
                 // Xử lý danh mục cha (có thể là null)
                 string danhMucCha = cmbDanhMucCha.SelectedValue as string;
@@ -142,18 +130,9 @@ namespace Winform_LibraryManagement_EF6
                     return;
                 }
 
-                int soLuongSach = Convert.ToInt32(txtSoLuongSach.Text.Trim());
-                string trangThai = cmbTrangThai.SelectedItem.ToString();
-
-                // Cập nhật danh mục
-                _danhMucSach.TenDanhMuc = tenDanhMuc;
-                _danhMucSach.MoTa = moTa;
-                _danhMucSach.DanhMucCha = danhMucCha;
-                _danhMucSach.SoLuongSach = soLuongSach;
-                _danhMucSach.TrangThai = trangThai;
 
                 //Cập nhật thông qua service
-                _danhMucSachService.UpdateDanhMuc(_danhMucSach);
+                _danhMucSachService.UpdateDanhMuc(_danhMucSachHienTai);
 
                 MessageBox.Show("Cập nhật danh mục thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DialogResult = DialogResult.OK;

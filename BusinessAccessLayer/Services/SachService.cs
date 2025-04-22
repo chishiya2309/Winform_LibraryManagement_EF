@@ -35,9 +35,11 @@ namespace BusinessAccessLayer.Services
         {
             keyword = keyword.ToLower();
             return _unitOfWork.SachRepository.Find(s =>
+                s.MaSach.ToLower().Contains(keyword) ||
                 s.TenSach.ToLower().Contains(keyword) ||
                 s.TacGia.ToLower().Contains(keyword) ||
                 s.ISBN.ToLower().Contains(keyword) ||
+                s.ViTri.ToLower().Contains(keyword) ||
                 s.NXB.ToLower().Contains(keyword));
         }
 

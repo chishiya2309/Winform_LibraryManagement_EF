@@ -116,7 +116,6 @@ namespace Winform_LibraryManagement_EF6
                 // Lấy dòng đã chọn
                 DataGridViewRow selectedRow = booksGridView.SelectedRows[0];
 
-                // Lấy mã sách để tìm kiếm trong DataTable
                 string maSach = selectedRow.Cells["MaSach"].Value.ToString();
 
                 //Lấy thông tin sách từ service
