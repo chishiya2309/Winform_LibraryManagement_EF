@@ -62,9 +62,19 @@ namespace BusinessAccessLayer.Services
             if (danhMuc == null)
                 throw new ArgumentNullException(nameof(danhMuc));
 
-            danhMuc.CapNhatLanCuoi = DateTime.Now;
+            // Lấy thông tin danh mục hiện tại từ database
+            var danhMucHienTai = _unitOfWork.DanhMucSachRepository.GetById(danhMuc.MaDanhMuc);
+            if (danhMucHienTai == null)
+                throw new Exception("Không tìm thấy danh mục cần cập nhật.");
 
-            _unitOfWork.DanhMucSachRepository.Update(danhMuc);
+            // Cập nhật các thuộc tính của entity hiện tại
+            danhMucHienTai.TenDanhMuc = danhMuc.TenDanhMuc;
+            danhMucHienTai.MoTa = danhMuc.MoTa;
+            danhMucHienTai.DanhMucCha = danhMuc.DanhMucCha;
+            danhMucHienTai.SoLuongSach = danhMuc.SoLuongSach;
+            danhMucHienTai.CapNhatLanCuoi = DateTime.Now;
+            danhMucHienTai.TrangThai = danhMuc.TrangThai;
+
             _unitOfWork.Save();
         }
 
