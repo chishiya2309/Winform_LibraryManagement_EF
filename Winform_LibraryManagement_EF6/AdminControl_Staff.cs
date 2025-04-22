@@ -44,7 +44,7 @@ namespace Winform_LibraryManagement_EF6
             {
                 switch (trangThai)
                 {
-                    case "Đang làm việc":
+                    case "Đang làm":
                         e.CellStyle.ForeColor = Color.Green;
                         break;
                     case "Tạm nghỉ":

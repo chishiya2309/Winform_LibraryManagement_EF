@@ -9,17 +9,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataAccessLayer;
+using BusinessAccessLayer.Services;
+using DataAccessLayer.Models;
 
 namespace Winform_LibraryManagement_EF6
 {
     public partial class FormAddStaff : Form
     {
-        DBStaff dbst;
+        private readonly INhanVienService _nhanVienService;
         public FormAddStaff()
         {
             InitializeComponent();
             InitializeForm();
-            dbst = new DBStaff();
+            _nhanVienService = new NhanVienService();
         }
 
         private void InitializeForm()
@@ -52,35 +54,29 @@ namespace Winform_LibraryManagement_EF6
 
             try
             {
-                string maNhanVien = txtID.Text.Trim();
-                string hoTen = txtHoTen.Text.Trim();
-                string gioiTinh = cmbGioiTinh.SelectedItem.ToString();
-                string chucVu = cmbChucVu.SelectedItem.ToString();
-                string email = txtEmail.Text.Trim();
-                string soDienThoai = txtSoDienThoai.Text.Trim();
-                DateTime ngayVaoLam = dtpNgayVaoLam.Value;
-                string trangThai = cmbTrangThai.SelectedItem.ToString();
-
-                string err = "";
-                bool success = dbst.ThemNhanVien(ref err, maNhanVien, hoTen, gioiTinh,
-                    chucVu, email, soDienThoai, ngayVaoLam, trangThai);
-
-                if (success)
+                // Tạo đối tượng nhân viên mới với dữ liệu từ Form
+                NhanVien nhanVien = new NhanVien
                 {
-                    MessageBox.Show("Thêm nhân viên mới thành công!", "Thông báo",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    DialogResult = DialogResult.OK;
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Lỗi khi thêm nhân viên: " + err, "Lỗi",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                    ID = txtID.Text.Trim(),
+                    HoTen = txtHoTen.Text.Trim(),
+                    GioiTinh = cmbGioiTinh.SelectedItem.ToString(),
+                    ChucVu = cmbChucVu.SelectedItem.ToString(),
+                    Email = txtEmail.Text.Trim(),
+                    SoDienThoai = txtSoDienThoai.Text.Trim(),
+                    NgayVaoLam = dtpNgayVaoLam.Value,
+                    TrangThai = cmbTrangThai.SelectedItem.ToString()
+                };
+
+                _nhanVienService.AddNhanVien(nhanVien);
+
+                MessageBox.Show("Thêm nhân viên mới thành công!", "Thông báo",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DialogResult = DialogResult.OK;
+                this.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi: " + ex.Message, "Lỗi",
+                MessageBox.Show("Lỗi khi thêm nhân viên: " + ex.Message, "Lỗi",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -124,6 +120,15 @@ namespace Winform_LibraryManagement_EF6
                 return false;
             }
 
+            // Kiểm tra email đã tồn tại chưa
+            if (_nhanVienService.EmailExists(txtEmail.Text.Trim()))
+            {
+                MessageBox.Show("Email này đã được sử dụng!", "Lỗi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtEmail.Focus();
+                return false;
+            }
+
             // Kiểm tra số điện thoại
             if (string.IsNullOrWhiteSpace(txtSoDienThoai.Text))
             {
@@ -139,6 +144,15 @@ namespace Winform_LibraryManagement_EF6
             {
                 MessageBox.Show("Số điện thoại không hợp lệ! Số điện thoại phải bắt đầu bằng số 0 và có 10-11 chữ số.",
                     "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtSoDienThoai.Focus();
+                return false;
+            }
+
+            // Kiểm tra số điện thoại đã tồn tại chưa
+            if (_nhanVienService.SoDienThoaiExists(txtSoDienThoai.Text.Trim()))
+            {
+                MessageBox.Show("Số điện thoại này đã được sử dụng!", "Lỗi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtSoDienThoai.Focus();
                 return false;
             }

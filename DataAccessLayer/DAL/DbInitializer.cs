@@ -118,7 +118,7 @@ namespace DataAccessLayer.DAL
                     Email = "an@example.com",
                     SoDienThoai = "0987654321",
                     NgayVaoLam = DateTime.Now.AddYears(-2),
-                    TrangThai = "Đang làm việc"
+                    TrangThai = "Đang làm"
                 },
                 new NhanVien {
                     ID = "NV002",
@@ -128,7 +128,7 @@ namespace DataAccessLayer.DAL
                     Email = "binh@example.com",
                     SoDienThoai = "0912345678",
                     NgayVaoLam = DateTime.Now.AddYears(-1),
-                    TrangThai = "Đang làm việc"
+                    TrangThai = "Đang làm"
                 }
             };
             context.NhanViens.AddRange(nhanVienList);
