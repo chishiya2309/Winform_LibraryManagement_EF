@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="DTOs\DanhMucSachDTO.cs" />
     <Compile Include="DTOs\SachDTO.cs" />
+    <Compile Include="DTOs\ThanhVienDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DanhMucSachService.cs" />
     <Compile Include="Services\IDanhMucSachService.cs" />
@@ -57,7 +58,7 @@
     <Compile Include="Services\NhanVienService.cs" />
     <Compile Include="Services\PhieuMuonService.cs" />
     <Compile Include="Services\SachService.cs" />
-    <Compile Include="Services\ThanhVien.cs" />
+    <Compile Include="Services\ThanhVienService.cs" />
     <Compile Include="Services\ThongKeService.cs" />
   </ItemGroup>
   <ItemGroup>

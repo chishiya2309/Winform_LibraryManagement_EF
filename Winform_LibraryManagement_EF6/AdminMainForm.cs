@@ -36,7 +36,7 @@ namespace Winform_LibraryManagement_EF6
                 { btnDashboard, new AdminControl_Dashboard() },
                 //{ btnStaff, new AdminControl_Staff() },
                 {btnBooks, new AdminControl_Books()},
-                //{btnMembers, new AdminControl_Member() },
+                {btnMembers, new AdminControl_Member()},
                 {btnCategories, new  AdminControl_Categories()},
                 //{btnReports, new AdminControl_Reports() },
                 //{btnLoanAndReturn, new AdminControl_LoanAndReturn() }

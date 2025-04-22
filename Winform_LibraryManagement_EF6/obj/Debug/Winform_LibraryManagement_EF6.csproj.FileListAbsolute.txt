@@ -28,3 +28,5 @@ D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\obj\Debug\Winform_LibraryManag
 D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\obj\Debug\Winform_LibraryManagement_EF6.AdminControl_Books.resources
 D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\obj\Debug\Winform_LibraryManagement_EF6.FormAddBook.resources
 D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\obj\Debug\Winform_LibraryManagement_EF6.FormEditBook.resources
+D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\obj\Debug\Winform_LibraryManagement_EF6.AdminControl_Member.resources
+D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\obj\Debug\Winform_LibraryManagement_EF6.FormAddMember.resources

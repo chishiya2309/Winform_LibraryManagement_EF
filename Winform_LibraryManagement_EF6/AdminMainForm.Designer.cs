@@ -214,6 +214,7 @@ namespace Winform_LibraryManagement_EF6
             this.btnMembers.Text = "Quản lý thành viên";
             this.btnMembers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMembers.UseVisualStyleBackColor = true;
+            this.btnMembers.Click += new System.EventHandler(this.btnMembers_Click);
             // 
             // btnStaff
             // 

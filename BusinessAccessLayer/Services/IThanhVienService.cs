@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
+using BusinessAccessLayer.DTOs;
 using DataAccessLayer.Models;
 
 namespace BusinessAccessLayer.Services
 {
     public interface IThanhVienService
     {
-        IEnumerable<ThanhVien> GetAllThanhVien();
+        IEnumerable<ThanhVienDTO> GetAllThanhVienDTO();
         ThanhVien GetThanhVienById(string maThanhVien);
         IEnumerable<ThanhVien> SearchThanhVien(string keyword);
         void AddThanhVien(ThanhVien thanhVien);
