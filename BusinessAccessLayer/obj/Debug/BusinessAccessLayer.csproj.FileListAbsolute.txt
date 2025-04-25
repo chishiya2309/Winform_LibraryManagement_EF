@@ -1,3 +1,6 @@
+D:\Workspace\WF_EF6\BusinessAccessLayer\obj\Debug\BusinessAccessLayer.csproj.AssemblyReference.cache
+D:\Workspace\WF_EF6\BusinessAccessLayer\obj\Debug\BusinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\Workspace\WF_EF6\BusinessAccessLayer\bin\Debug\BusinessAccessLayer.dll.config
 D:\Workspace\WF_EF6\BusinessAccessLayer\bin\Debug\BusinessAccessLayer.dll
 D:\Workspace\WF_EF6\BusinessAccessLayer\bin\Debug\BusinessAccessLayer.pdb
 D:\Workspace\WF_EF6\BusinessAccessLayer\bin\Debug\DataAccessLayer.dll
@@ -5,9 +8,6 @@ D:\Workspace\WF_EF6\BusinessAccessLayer\bin\Debug\EntityFramework.dll
 D:\Workspace\WF_EF6\BusinessAccessLayer\bin\Debug\DataAccessLayer.pdb
 D:\Workspace\WF_EF6\BusinessAccessLayer\bin\Debug\DataAccessLayer.dll.config
 D:\Workspace\WF_EF6\BusinessAccessLayer\bin\Debug\EntityFramework.xml
-D:\Workspace\WF_EF6\BusinessAccessLayer\obj\Debug\BusinessAccessLayer.csproj.AssemblyReference.cache
-D:\Workspace\WF_EF6\BusinessAccessLayer\obj\Debug\BusinessAccessLayer.csproj.CoreCompileInputs.cache
 D:\Workspace\WF_EF6\BusinessAccessLayer\obj\Debug\Business.395A7FC9.Up2Date
 D:\Workspace\WF_EF6\BusinessAccessLayer\obj\Debug\BusinessAccessLayer.dll
 D:\Workspace\WF_EF6\BusinessAccessLayer\obj\Debug\BusinessAccessLayer.pdb
-D:\Workspace\WF_EF6\BusinessAccessLayer\bin\Debug\BusinessAccessLayer.dll.config

@@ -19,7 +19,7 @@ namespace BusinessAccessLayer.Services
         public IEnumerable<ThanhVien> GetAllThanhVienDTO()
         {
             return _unitOfWork.ThanhVienRepository.GetAll();
-                
+
         }
 
         public ThanhVien GetThanhVienById(string maThanhVien)
@@ -124,7 +124,7 @@ namespace BusinessAccessLayer.Services
 
         public IEnumerable<ThanhVien> GetAllThanhVien()
         {
-            throw new NotImplementedException();
+            return _unitOfWork.ThanhVienRepository.GetAll();
         }
     }
 }
