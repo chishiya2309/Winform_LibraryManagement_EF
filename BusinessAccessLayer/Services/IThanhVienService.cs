@@ -6,7 +6,7 @@ namespace BusinessAccessLayer.Services
 {
     public interface IThanhVienService
     {
-        IEnumerable<ThanhVien> GetAllThanhVien();
+        IEnumerable<ThanhVienDTO> GetAllThanhVienDTO();
         ThanhVien GetThanhVienById(string maThanhVien);
         IEnumerable<ThanhVien> SearchThanhVien(string keyword);
         void AddThanhVien(ThanhVien thanhVien);

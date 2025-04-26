@@ -6,13 +6,14 @@ using System.Windows.Forms;
 using BusinessAccessLayer.Services;
 using DataAccessLayer.Models;
 using System.Collections.Generic;
+using BusinessAccessLayer.DTOs;
 
 namespace Winform_LibraryManagement_EF6
 {
     public partial class AdminControl_Member : UserControl
     {
         private readonly IThanhVienService _thanhVienService;
-        private List<ThanhVien> _thanhVienList;
+        private List<ThanhVienDTO> _thanhVienList;
 
         public AdminControl_Member()
         {
@@ -94,7 +95,7 @@ namespace Winform_LibraryManagement_EF6
 
             
             //Lấy danh sách thành viên từ service
-            _thanhVienList = _thanhVienService.GetAllThanhVien().ToList();
+            _thanhVienList = _thanhVienService.GetAllThanhVienDTO().ToList();
 
             //Hiển thị dữ liệu lên DataGridView
             membersGridView.DataSource = _thanhVienList;
@@ -233,21 +234,27 @@ namespace Winform_LibraryManagement_EF6
         {
             try
             {
-                IEnumerable<ThanhVien> filteredMembers;
-
                 if (string.IsNullOrWhiteSpace(searchTerm))
                 {
                     // Nếu không có từ khóa tìm kiếm, hiển thị tất cả
-                    filteredMembers = _thanhVienService.GetAllThanhVien();
+                    _thanhVienList = _thanhVienService.GetAllThanhVienDTO().ToList();
                 }
                 else
                 {
-                    // Tìm kiếm dựa trên từ khóa
-                    filteredMembers = _thanhVienService.SearchThanhVien(searchTerm);
+                    var searchResults = _thanhVienService.SearchThanhVien(searchTerm);
+                    _thanhVienList = searchResults.Select(s => new ThanhVienDTO
+                    {
+                        MaThanhVien = s.MaThanhVien,
+                        HoTen = s.HoTen,
+                        GioiTinh = s.GioiTinh,
+                        SoDienThoai = s.SoDienThoai,
+                        Email = s.Email,
+                        LoaiThanhVien = s.LoaiThanhVien,
+                        NgayDangKy = s.NgayDangKy,
+                        NgayHetHan = s.NgayHetHan,
+                        TrangThai = s.TrangThai
+                    }).ToList();
                 }
-
-                // Cập nhật danh sách hiện tại
-                _thanhVienList = filteredMembers.ToList();
 
                 // Hiển thị kết quả tìm kiếm
                 membersGridView.DataSource = _thanhVienList;

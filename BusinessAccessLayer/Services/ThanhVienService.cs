@@ -16,9 +16,21 @@ namespace BusinessAccessLayer.Services
             _unitOfWork = new UnitOfWork();
         }
 
-        public IEnumerable<ThanhVien> GetAllThanhVienDTO()
+        public IEnumerable<ThanhVienDTO> GetAllThanhVienDTO()
         {
-            return _unitOfWork.ThanhVienRepository.GetAll();
+            return _unitOfWork.ThanhVienRepository.GetAll()
+                .Select(tv => new ThanhVienDTO
+                {
+                    MaThanhVien = tv.MaThanhVien,
+                    HoTen = tv.HoTen,
+                    GioiTinh = tv.GioiTinh,
+                    SoDienThoai = tv.SoDienThoai,
+                    Email = tv.Email,
+                    LoaiThanhVien = tv.LoaiThanhVien,
+                    NgayDangKy = tv.NgayDangKy,
+                    NgayHetHan = tv.NgayHetHan,
+                    TrangThai = tv.TrangThai
+                }).ToList();
 
         }
 
