@@ -25,14 +25,14 @@ namespace Winform_LibraryManagement_EF6
 
         private void btnAddMember_Click(object sender, EventArgs e)
         {
-            //using (FormAddMember form = new FormAddMember())
-            //{
-            //    if (form.ShowDialog() == DialogResult.OK)
-            //    {
-            //        // Nếu thêm thành công, cập nhật lại dữ liệu
-            //        LoadData();
-            //    }
-            //}
+            using (FormAddMember form = new FormAddMember())
+            {
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    // Nếu thêm thành công, cập nhật lại dữ liệu
+                    LoadData();
+                }
+            }
         }
 
         private void Adjust()
