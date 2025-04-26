@@ -33,3 +33,4 @@ D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\bin\Debug\EntityFramework.SqlS
 D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\obj\Debug\Winform_.CAB00E17.Up2Date
 D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\obj\Debug\Winform_LibraryManagement_EF6.exe
 D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\obj\Debug\Winform_LibraryManagement_EF6.pdb
+D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\obj\Debug\Winform_LibraryManagement_EF6.FormEditMember.resources

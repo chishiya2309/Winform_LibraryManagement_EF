@@ -43,6 +43,7 @@ namespace BusinessAccessLayer.Services
         {
             keyword = keyword.ToLower();
             return _unitOfWork.ThanhVienRepository.Find(t =>
+                t.MaThanhVien.ToLower().Contains(keyword) ||
                 t.HoTen.ToLower().Contains(keyword) ||
                 t.Email.ToLower().Contains(keyword) ||
                 t.SoDienThoai.Contains(keyword));
@@ -93,7 +94,15 @@ namespace BusinessAccessLayer.Services
             if (thanhVien.NgayHetHan < DateTime.Now && thanhVien.TrangThai == "Hoạt động")
                 thanhVien.TrangThai = "Hết hạn";
 
-            _unitOfWork.ThanhVienRepository.Update(thanhVien);
+            thanhVienHienTai.HoTen = thanhVien.HoTen;
+            thanhVienHienTai.GioiTinh = thanhVien.GioiTinh;
+            thanhVienHienTai.SoDienThoai = thanhVien.SoDienThoai;
+            thanhVienHienTai.Email = thanhVien.Email;
+            thanhVienHienTai.LoaiThanhVien = thanhVien.LoaiThanhVien;
+            thanhVienHienTai.NgayDangKy = thanhVien.NgayDangKy;
+            thanhVienHienTai.NgayHetHan = thanhVien.NgayHetHan;
+            thanhVienHienTai.TrangThai = thanhVien.TrangThai;
+
             _unitOfWork.Save();
         }
 

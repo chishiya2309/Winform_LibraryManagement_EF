@@ -146,12 +146,6 @@
     <Compile Include="FormEditStaff.Designer.cs">
       <DependentUpon>FormEditStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,11 +190,11 @@
     <EmbeddedResource Include="FormEditCategory.resx">
       <DependentUpon>FormEditCategory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormEditMember.resx">
+      <DependentUpon>FormEditMember.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEditStaff.resx">
       <DependentUpon>FormEditStaff.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

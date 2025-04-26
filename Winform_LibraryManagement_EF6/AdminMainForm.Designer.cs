@@ -254,6 +254,7 @@ namespace Winform_LibraryManagement_EF6
             this.btnLoanAndReturn.Text = "Quản lý mượn / trả sách";
             this.btnLoanAndReturn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLoanAndReturn.UseVisualStyleBackColor = true;
+            this.btnLoanAndReturn.Click += new System.EventHandler(this.btnLoanAndReturn_Click);
             // 
             // btnReports
             // 
