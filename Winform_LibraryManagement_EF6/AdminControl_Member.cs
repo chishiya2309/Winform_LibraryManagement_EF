@@ -68,8 +68,45 @@ namespace Winform_LibraryManagement_EF6
 
         private void EditSelectedMember()
         {
-            MessageBox.Show("Chức năng chỉnh sửa thành viên sẽ được triển khai sau.", "Thông báo",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (membersGridView.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn thành viên cần chỉnh sửa!", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            try
+            {
+                // Lấy dòng đã chọn
+                DataGridViewRow selectedRow = membersGridView.SelectedRows[0];
+
+                string maThanhVien = selectedRow.Cells["MaThanhVien"].Value.ToString();
+
+                //Lấy thông tin thành viên từ service
+                ThanhVien thanhVien = _thanhVienService.GetThanhVienById(maThanhVien);
+
+                if (thanhVien != null)
+                {
+                    // Tạo và hiển thị form chỉnh sửa với thông tin thành viên đã chọn
+                    FormEditMember formEditMember = new FormEditMember(thanhVien);
+
+                    if (formEditMember.ShowDialog() == DialogResult.OK)
+                    {
+                        // Cập nhật dữ liệu trong DataGridView sau khi chỉnh sửa
+                        LoadData();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy thông tin thành viên!", "Lỗi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi chỉnh sửa thông tin thành viên: " + ex.Message, "Lỗi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void xóaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -149,30 +186,7 @@ namespace Winform_LibraryManagement_EF6
 
         private void btnEditMember_Click(object sender, EventArgs e)
         {
-            if (membersGridView.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Vui lòng chọn một thành viên để chỉnh sửa", "Thông báo",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-
-            // Lấy dòng đã chọn
-            DataGridViewRow row = membersGridView.SelectedRows[0];
-
-            // Lấy MaThanhVien từ dòng đã chọn
-            string maThanhVien = row.Cells["MaThanhVien"].Value.ToString();
-
-            // Mở form chỉnh sửa với thông tin thành viên đã chọn
-            using (FormEditMember form = new FormEditMember(maThanhVien))
-            {
-                if (form.ShowDialog() == DialogResult.OK)
-                {
-                    // Nếu chỉnh sửa thành công, cập nhật lại dữ liệu
-                    LoadData();
-                }
-            }
-
-
+            EditSelectedMember();
         }
 
         private void btnDeleteMember_Click(object sender, EventArgs e)
