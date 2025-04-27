@@ -80,6 +80,12 @@
     <Compile Include="AdminControl_Dashboard.Designer.cs">
       <DependentUpon>AdminControl_Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminControl_LoanAndReturn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminControl_LoanAndReturn.Designer.cs">
+      <DependentUpon>AdminControl_LoanAndReturn.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminControl_Member.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -152,6 +158,12 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MuonSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuonSach.Designer.cs">
+      <DependentUpon>MuonSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AdminControl_Books.resx">
@@ -162,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminControl_Dashboard.resx">
       <DependentUpon>AdminControl_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminControl_LoanAndReturn.resx">
+      <DependentUpon>AdminControl_LoanAndReturn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminControl_Member.resx">
       <DependentUpon>AdminControl_Member.cs</DependentUpon>
