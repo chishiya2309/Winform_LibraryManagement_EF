@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="DTOs\DanhMucSachDTO.cs" />
     <Compile Include="DTOs\NhanVienDTO.cs" />
+    <Compile Include="DTOs\PhieuMuonDTO.cs" />
     <Compile Include="DTOs\SachDTO.cs" />
     <Compile Include="DTOs\ThanhVienDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

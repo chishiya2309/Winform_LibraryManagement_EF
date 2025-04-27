@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using DataAccessLayer.DAL;
 using DataAccessLayer.Models;
+using BusinessAccessLayer.DTOs;
 
 namespace BusinessAccessLayer.Services
 {
@@ -15,9 +16,20 @@ namespace BusinessAccessLayer.Services
             _unitOfWork = new UnitOfWork();
         }
 
-        public IEnumerable<PhieuMuon> GetAllPhieuMuon()
+        public IEnumerable<PhieuMuonDTO> GetAllPhieuMuonDTO()
         {
-            return _unitOfWork.PhieuMuonRepository.GetAll();
+            return _unitOfWork.PhieuMuonRepository.GetAll()
+                .Select(p => new PhieuMuonDTO
+                {
+                    MaPhieu = p.MaPhieu,
+                    MaThanhVien = p.MaThanhVien,
+                    NgayMuon = p.NgayMuon,
+                    HanTra = p.HanTra,
+                    NgayTraThucTe = p.NgayTraThucTe,
+                    TrangThai = p.TrangThai,
+                    MaSach = p.MaSach,
+                    SoLuong = p.SoLuong
+                });
         }
 
         public PhieuMuon GetPhieuMuonById(int maPhieu)
@@ -34,6 +46,15 @@ namespace BusinessAccessLayer.Services
         {
             return _unitOfWork.PhieuMuonRepository.Find(p =>
                 p.NgayMuon >= fromDate && p.NgayMuon <= toDate);
+        }
+
+        public IEnumerable<PhieuMuon> SearchPhieuMuon(string keyword)
+        {
+            keyword = keyword.ToLower();
+            return _unitOfWork.PhieuMuonRepository.Find(pm =>
+                pm.MaPhieu.ToString().Contains(keyword) ||
+                pm.MaThanhVien.ToLower().Contains(keyword) ||
+                pm.MaSach.ToLower().Contains(keyword));
         }
 
         public void AddPhieuMuon(PhieuMuon phieuMuon)

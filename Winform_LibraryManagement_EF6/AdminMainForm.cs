@@ -39,7 +39,7 @@ namespace Winform_LibraryManagement_EF6
                 {btnMembers, new AdminControl_Member()},
                 {btnCategories, new  AdminControl_Categories()},
                 //{btnReports, new AdminControl_Reports() },
-                //{btnLoanAndReturn, new AdminControl_LoanAndReturn() }
+                {btnLoanAndReturn, new AdminControl_LoanAndReturn() }
             };
         }
 
