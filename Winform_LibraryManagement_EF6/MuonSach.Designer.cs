@@ -147,6 +147,7 @@
             this.dtpHanTra.Name = "dtpHanTra";
             this.dtpHanTra.Size = new System.Drawing.Size(340, 25);
             this.dtpHanTra.TabIndex = 4;
+            //this.dtpHanTra.ValueChanged += new System.EventHandler(this.dtpHanTra_ValueChanged);
             // 
             // dtpNgayMuon
             // 
@@ -157,6 +158,7 @@
             this.dtpNgayMuon.Name = "dtpNgayMuon";
             this.dtpNgayMuon.Size = new System.Drawing.Size(340, 25);
             this.dtpNgayMuon.TabIndex = 3;
+     
             // 
             // cboSach
             // 
