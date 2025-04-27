@@ -62,36 +62,57 @@ namespace BusinessAccessLayer.Services
             if (phieuMuon == null)
                 throw new ArgumentNullException("phieuMuon");
 
-            // Kiểm tra thông tin
-            var thanhVien = _unitOfWork.ThanhVienRepository.GetById(phieuMuon.MaThanhVien);
-            if (thanhVien == null)
-                throw new Exception("Thành viên không tồn tại.");
-
-            if (thanhVien.TrangThai != "Hoạt động")
-                throw new Exception("Thành viên không trong trạng thái hoạt động, không thể mượn sách.");
-
-            var sach = _unitOfWork.SachRepository.GetById(phieuMuon.MaSach);
-            if (sach == null)
-                throw new Exception("Sách không tồn tại.");
-
-            if (sach.KhaDung < phieuMuon.SoLuong)
-                throw new Exception("Số lượng sách không đủ để cho mượn.");
-
-            // Thiết lập tự động
-            if (string.IsNullOrEmpty(phieuMuon.TrangThai))
-                phieuMuon.TrangThai = "Đang mượn";
-
+            // Thiết lập giá trị mặc định
             if (phieuMuon.NgayMuon == DateTime.MinValue)
                 phieuMuon.NgayMuon = DateTime.Now;
 
             if (phieuMuon.HanTra == DateTime.MinValue)
-                phieuMuon.HanTra = DateTime.Now.AddDays(14); // Mặc định 14 ngày
+                phieuMuon.HanTra = phieuMuon.NgayMuon.AddDays(14); // Mặc định 14 ngày
+
+            if (string.IsNullOrEmpty(phieuMuon.TrangThai))
+                phieuMuon.TrangThai = "Đang mượn";
+
+            // Kiểm tra hạn trả phải lớn hơn ngày mượn ít nhất 1 ngày
+            if (phieuMuon.HanTra <= phieuMuon.NgayMuon)
+                throw new Exception("Hạn trả phải lớn hơn ngày mượn ít nhất 1 ngày.");
+
+            // Kiểm tra thành viên có tồn tại không
+            var thanhVien = _unitOfWork.ThanhVienRepository.GetById(phieuMuon.MaThanhVien);
+            if (thanhVien == null)
+                throw new Exception("Mã thành viên không tồn tại!");
+
+            // Kiểm tra thành viên có bị khóa hoặc hết hạn không
+            if (thanhVien.TrangThai == "Khóa" || thanhVien.TrangThai == "Hết hạn")
+                throw new Exception("Thành viên đã bị khóa hoặc tài khoản đã hết hạn!");
+
+            // Kiểm tra sách có tồn tại không
+            var sach = _unitOfWork.SachRepository.GetById(phieuMuon.MaSach);
+            if (sach == null)
+                throw new Exception("Mã sách không tồn tại!");
+
+            // Kiểm tra số lượng sách còn đủ không
+            if (sach.KhaDung < phieuMuon.SoLuong)
+                throw new Exception($"Số lượng sách không đủ để mượn! Hiện có {sach.KhaDung} cuốn khả dụng.");
+
+            // Kiểm tra số lượng sách thành viên đã mượn (giới hạn mỗi thành viên mượn tối đa 5 sách)
+            int soSachDangMuon = CountSachByThanhVien(phieuMuon.MaThanhVien);
+            if ((soSachDangMuon + phieuMuon.SoLuong) > 5)
+                throw new Exception($"Thành viên đã mượn {soSachDangMuon} cuốn, không thể mượn thêm {phieuMuon.SoLuong} cuốn nữa! Tối đa là 5 cuốn.");
+
+            // Kiểm tra thành viên có phiếu mượn quá hạn không
+            bool coPhieuMuonQuaHan = _unitOfWork.PhieuMuonRepository.Find(p =>
+                p.MaThanhVien == phieuMuon.MaThanhVien && p.TrangThai == "Quá hạn").Any();
+
+            if (coPhieuMuonQuaHan)
+                throw new Exception("Thành viên có sách mượn quá hạn chưa trả, không thể mượn thêm!");
+
+            // Thêm phiếu mượn
+            _unitOfWork.PhieuMuonRepository.Add(phieuMuon);
 
             // Cập nhật số lượng sách khả dụng
             sach.KhaDung -= phieuMuon.SoLuong;
             _unitOfWork.SachRepository.Update(sach);
 
-            _unitOfWork.PhieuMuonRepository.Add(phieuMuon);
             _unitOfWork.Save();
         }
 

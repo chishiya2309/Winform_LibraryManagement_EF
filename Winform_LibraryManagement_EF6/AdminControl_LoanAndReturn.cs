@@ -70,14 +70,14 @@ namespace Winform_LibraryManagement_EF6
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            //using (TraSach form = new TraSach())
-            //{
-            //    if (form.ShowDialog() == DialogResult.OK)
-            //    {
-            //        // Nếu thêm thành công, cập nhật lại dữ liệu
-            //        LoadData();
-            //    }
-            //}
+            using (TraSach form = new TraSach())
+            {
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    // Nếu thêm thành công, cập nhật lại dữ liệu
+                    LoadData();
+                }
+            }
         }
 
         private void btnEditLAR_Click(object sender, EventArgs e)

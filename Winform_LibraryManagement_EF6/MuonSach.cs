@@ -8,7 +8,7 @@ using System.Linq;
 using System.Windows.Forms;
 
 namespace Winform_LibraryManagement_EF6
-{ 
+{
 
     public partial class MuonSach : Form
     {
@@ -26,6 +26,26 @@ namespace Winform_LibraryManagement_EF6
             _sachService = new SachService();
             _phieuMuonService = new PhieuMuonService();
             LoadData();
+
+            // Thêm sự kiện ValueChanged cho DateTimePicker
+            dtpNgayMuon.ValueChanged += DateTimePicker_ValueChanged;
+            dtpHanTra.ValueChanged += DateTimePicker_ValueChanged;
+        }
+
+        private void DateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            ValidateReturnDate();
+        }
+
+        private void ValidateReturnDate()
+        {
+            // Đảm bảo hạn trả lớn hơn ngày mượn ít nhất 1 ngày
+            if (dtpHanTra.Value <= dtpNgayMuon.Value)
+            {
+                MessageBox.Show("Hạn trả phải lớn hơn ngày mượn ít nhất 1 ngày!", "Lỗi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dtpHanTra.Value = dtpNgayMuon.Value.AddDays(1);
+            }
         }
 
         private void LoadData()
@@ -59,6 +79,14 @@ namespace Winform_LibraryManagement_EF6
         {
             try
             {
+                // Kiểm tra hạn trả một lần nữa
+                if (dtpHanTra.Value <= dtpNgayMuon.Value)
+                {
+                    MessageBox.Show("Hạn trả phải lớn hơn ngày mượn ít nhất 1 ngày!", "Lỗi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 //Tạo đối tượng phiếu mượn mới
                 PhieuMuon phieuMuon = new PhieuMuon
                 {
