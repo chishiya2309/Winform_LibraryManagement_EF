@@ -34,3 +34,4 @@ D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\obj\Debug\Winform_LibraryManag
 D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\obj\Debug\Winform_LibraryManagement_EF6.pdb
 D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\obj\Debug\Winform_LibraryManagement_EF6.FormEditMember.resources
 D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\obj\Debug\Winform_LibraryManagement_EF6.AdminControl_LoanAndReturn.resources
+D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\obj\Debug\Winform_LibraryManagement_EF6.MuonSach.resources
