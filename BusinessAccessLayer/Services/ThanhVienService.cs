@@ -155,5 +155,24 @@ namespace BusinessAccessLayer.Services
                 t.NgayHetHan < targetDate &&
                 t.TrangThai == "Hoạt động");
         }
+
+        public IEnumerable<ThongKeThanhVienDTO> ThongKeThanhVienTheoLoai()
+        {
+            var thanhVienList = _unitOfWork.ThanhVienRepository.GetAll();
+            int totalMembers = thanhVienList.Count();
+
+            if (totalMembers == 0)
+                return Enumerable.Empty<ThongKeThanhVienDTO>();
+
+            return thanhVienList
+                .GroupBy(tv => tv.LoaiThanhVien)
+                .Select(g => new ThongKeThanhVienDTO
+                {
+                    LoaiThanhVien = g.Key,
+                    SoLuong = g.Count(),
+                    TiLe = totalMembers > 0 ? (g.Count() * 100.0 / totalMembers) : 0.0
+                })
+                .ToList();
+        }
     }
 }

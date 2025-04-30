@@ -86,12 +86,12 @@ namespace Winform_LibraryManagement_EF6
                 case "Danh sách thành viên sắp hết hạn":
                     reportControl = new AdminControl_expiringMembers();
                     break;
-                //case "Thống kê số lượng thành viên theo loại":
-                //    reportControl = new AdminControl_membersChart();
-                //    break;
-                //case "Danh sách phiếu mượn quá hạn":
-                //    reportControl = new AdminControl_PhieuMuonQuaHan();
-                //    break;
+                case "Thống kê số lượng thành viên theo loại":
+                    reportControl = new AdminControl_membersChart();
+                    break;
+                case "Danh sách phiếu mượn quá hạn":
+                    reportControl = new AdminControl_PhieuMuonQuaHan();
+                    break;
                 //case "Lịch sử mượn sách của thành viên cụ thể":
                 //    reportControl = new AdminControl_MemberLoanHistory();
                 //    break;

@@ -17,5 +17,7 @@ namespace BusinessAccessLayer.Services
         bool SoDienThoaiExists(string soDienThoai);
         IEnumerable<PhieuMuon> GetPhieuMuonByThanhVien(string maThanhVien);
         IEnumerable<ThanhVien> GetThanhVienSapHetHan(int days);
+
+        IEnumerable<ThongKeThanhVienDTO> ThongKeThanhVienTheoLoai();
     }
 }

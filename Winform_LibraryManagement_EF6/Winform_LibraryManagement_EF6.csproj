@@ -110,11 +110,15 @@
     <Compile Include="AdminControl_MemberLoanHistory.Designer.cs">
       <DependentUpon>AdminControl_MemberLoanHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminControl_membersChart.cs" />
+    <Compile Include="AdminControl_membersChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="AdminControl_membersChart.Designer.cs">
       <DependentUpon>AdminControl_membersChart.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminControl_PhieuMuonQuaHan.cs" />
+    <Compile Include="AdminControl_PhieuMuonQuaHan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="AdminControl_PhieuMuonQuaHan.Designer.cs">
       <DependentUpon>AdminControl_PhieuMuonQuaHan.cs</DependentUpon>
     </Compile>
