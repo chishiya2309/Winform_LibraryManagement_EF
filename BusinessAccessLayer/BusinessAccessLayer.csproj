@@ -51,6 +51,7 @@
     <Compile Include="DTOs\ThanhVienDTO.cs" />
     <Compile Include="DTOs\ThongKeSachMuonTheoThangDTO.cs" />
     <Compile Include="DTOs\ThongKeThanhVienDTO.cs" />
+    <Compile Include="DTOs\ThongKeTraSachDTO.cs" />
     <Compile Include="DTOs\TopSachPhoBienDTO.cs" />
     <Compile Include="DTOs\TopThanhVienMuonDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

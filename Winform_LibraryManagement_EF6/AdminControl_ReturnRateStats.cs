@@ -1,4 +1,5 @@
-﻿using BusinessAccessLayer;
+﻿using BusinessAccessLayer.Services;
+using BusinessAccessLayer.DTOs;
 using System;
 using System.Data;
 using System.Drawing;
@@ -9,12 +10,12 @@ namespace Winform_LibraryManagement_EF6
 {
     public partial class AdminControl_ReturnRateStats : UserControl
     {
-        private DBLoanAndReturn dbLAR;
+        private readonly IPhieuMuonService _phieuMuonService;
 
         public AdminControl_ReturnRateStats()
         {
             InitializeComponent();
-            dbLAR = new DBLoanAndReturn();
+            _phieuMuonService = new PhieuMuonService();
             LoadData();
         }
 
@@ -22,8 +23,8 @@ namespace Winform_LibraryManagement_EF6
         {
             try
             {
-                // Gọi dữ liệu từ BAL
-                var (tongSoPhieu, soPhieuDungHan, soPhieuQuaHan) = dbLAR.ThongKeTraSach();
+                // Gọi dữ liệu từ Service
+                var thongKe = _phieuMuonService.GetThongKeTraSach();
 
                 // Xóa dữ liệu cũ trên biểu đồ
                 chartReturnRate.Series.Clear();
@@ -35,8 +36,8 @@ namespace Winform_LibraryManagement_EF6
                 };
 
                 // Thêm dữ liệu mới vào biểu đồ
-                series.Points.AddXY("Trả đúng hạn", soPhieuDungHan);
-                series.Points.AddXY("Trả quá hạn", soPhieuQuaHan);
+                series.Points.AddXY("Trả đúng hạn", thongKe.SoPhieuDungHan);
+                series.Points.AddXY("Trả quá hạn", thongKe.SoPhieuQuaHan);
 
                 // Cấu hình màu sắc
                 series.Points[0].Color = Color.Green; // Đúng hạn

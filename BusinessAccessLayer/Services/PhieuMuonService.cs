@@ -407,5 +407,41 @@ namespace BusinessAccessLayer.Services
                 .OrderByDescending(y => y)
                 .ToList();
         }
+
+        public ThongKeTraSachDTO GetThongKeTraSach()
+        {
+            var phieuMuonList = _unitOfWork.PhieuMuonRepository.GetAll().ToList();
+
+            if (phieuMuonList == null || !phieuMuonList.Any())
+            {
+                return new ThongKeTraSachDTO
+                {
+                    TongSoPhieu = 0,
+                    SoPhieuDungHan = 0,
+                    SoPhieuQuaHan = 0
+                };
+            }
+
+            int tongSoPhieu = phieuMuonList
+                .Count(p => p.TrangThai != "Đang mượn");
+
+            int soPhieuDungHan = phieuMuonList
+                .Count(p => p.TrangThai == "Đã trả"
+                    && p.NgayTraThucTe.HasValue
+                    && p.NgayTraThucTe.Value <= p.HanTra);
+
+            int soPhieuQuaHan = phieuMuonList
+                .Count(p => p.TrangThai == "Quá hạn"
+                    || (p.TrangThai == "Đã trả"
+                    && p.NgayTraThucTe.HasValue
+                    && p.NgayTraThucTe.Value > p.HanTra));
+
+            return new ThongKeTraSachDTO
+            {
+                TongSoPhieu = tongSoPhieu,
+                SoPhieuDungHan = soPhieuDungHan,
+                SoPhieuQuaHan = soPhieuQuaHan
+            };
+        }
     }
 }

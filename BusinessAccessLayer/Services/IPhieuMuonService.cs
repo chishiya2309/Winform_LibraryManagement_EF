@@ -28,5 +28,7 @@ namespace BusinessAccessLayer.Services
 
         IEnumerable<ThongKeSachMuonTheoThangDTO> GetThongKeSachMuonTheoThang(int? selectedYear = null);
         IEnumerable<int> GetDanhSachNam();
+
+        ThongKeTraSachDTO GetThongKeTraSach();
     }
 }

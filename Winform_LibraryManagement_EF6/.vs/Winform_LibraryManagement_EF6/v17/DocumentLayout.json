@@ -3,19 +3,19 @@
   "WorkspaceRootPath": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\admincontrol_memberloanhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|d:\\workspace\\wf_ef6\\winform_librarymanagement_ef6\\admincontrol_memberloanhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:admincontrol_memberloanhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|d:\\workspace\\wf_ef6\\winform_librarymanagement_ef6\\admincontrol_memberloanhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\admincontrol_memberloanhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:admincontrol_memberloanhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|d:\\workspace\\wf_ef6\\winform_librarymanagement_ef6\\admincontrol_reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\admincontrol_reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:admincontrol_reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|d:\\workspace\\wf_ef6\\winform_librarymanagement_ef6\\admincontrol_reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\admincontrol_reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:admincontrol_reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -448,8 +448,7 @@
               "RelativeToolTip": "AdminControl_Reports.cs",
               "ViewState": "AgIAADMAAAAAAAAAAAAswD8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T11:06:29.691Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-30T11:06:29.691Z"
             },
             {
               "$type": "Document",
@@ -471,7 +470,7 @@
               "RelativeDocumentMoniker": "AdminControl_MemberLoanHistory.cs",
               "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminControl_MemberLoanHistory.cs",
               "RelativeToolTip": "AdminControl_MemberLoanHistory.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAmwCAAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-30T08:31:22.794Z",
               "EditorCaption": ""
@@ -485,8 +484,7 @@
               "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminControl_Reports.cs [Design]",
               "RelativeToolTip": "AdminControl_Reports.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T11:06:27.991Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-30T11:06:27.991Z"
             },
             {
               "$type": "Document",
@@ -498,8 +496,7 @@
               "RelativeToolTip": "AdminControl_PopularBooks.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAuwC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T08:35:56.838Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-30T08:35:56.838Z"
             },
             {
               "$type": "Document",
@@ -510,8 +507,7 @@
               "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminControl_membersChart.cs [Design]",
               "RelativeToolTip": "AdminControl_membersChart.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T08:23:38.925Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-30T08:23:38.925Z"
             },
             {
               "$type": "Document",
@@ -522,8 +518,7 @@
               "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminControl_Member.cs [Design]",
               "RelativeToolTip": "AdminControl_Member.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T14:31:18.539Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-26T14:31:18.539Z"
             },
             {
               "$type": "Document",
@@ -535,8 +530,7 @@
               "RelativeToolTip": "AdminControl_Member.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T14:29:26.831Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-26T14:29:26.831Z"
             },
             {
               "$type": "Document",
@@ -548,8 +542,7 @@
               "RelativeToolTip": "AdminControl_PhieuMuonQuaHan.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T08:29:26.572Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-30T08:29:26.572Z"
             },
             {
               "$type": "Document",
@@ -560,8 +553,7 @@
               "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminControl_Categories.cs [Design]",
               "RelativeToolTip": "AdminControl_Categories.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T06:44:48.707Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-16T06:44:48.707Z"
             },
             {
               "$type": "Document",
@@ -596,8 +588,7 @@
               "RelativeToolTip": "AdminControl_membersChart.Designer.cs",
               "ViewState": "AgIAAD4AAAAAAAAAAAAAwFYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T08:24:03.885Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-30T08:24:03.885Z"
             },
             {
               "$type": "Document",
@@ -621,8 +612,7 @@
               "RelativeToolTip": "AdminControl_PopularBooks.Designer.cs",
               "ViewState": "AgIAAHMAAAAAAAAAAAAAwIsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T08:36:27.197Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-30T08:36:27.197Z"
             },
             {
               "$type": "Document",
@@ -706,8 +696,7 @@
               "RelativeToolTip": "AdminControl_membersChart.cs",
               "ViewState": "AgIAACwAAAAAAAAAAAAuwEQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T08:23:40.469Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-30T08:23:40.469Z"
             },
             {
               "$type": "Document",
@@ -787,8 +776,7 @@
               "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminControl_PopularBooks.cs [Design]",
               "RelativeToolTip": "AdminControl_PopularBooks.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T08:35:54.357Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-30T08:35:54.357Z"
             },
             {
               "$type": "Document",
@@ -856,8 +844,7 @@
               "RelativeToolTip": "AdminControl_Reports.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T08:19:54.077Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-30T08:19:54.077Z"
             },
             {
               "$type": "Document",
@@ -1127,8 +1114,7 @@
               "RelativeToolTip": "AdminControl_Member.Designer.cs",
               "ViewState": "AgIAAKgBAAAAAAAAAAAAwMABAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T16:05:55.688Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-26T16:05:55.688Z"
             },
             {
               "$type": "Document",
@@ -1423,8 +1409,7 @@
               "RelativeToolTip": "AdminControl_Categories.Designer.cs",
               "ViewState": "AgIAAEYAAAAAAAAAAAAYwFIAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T06:45:06.471Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-16T06:45:06.471Z"
             },
             {
               "$type": "Document",
@@ -1484,8 +1469,7 @@
               "RelativeToolTip": "App.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-04-16T03:52:46.801Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-16T03:52:46.801Z"
             },
             {
               "$type": "Document",
