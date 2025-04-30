@@ -24,9 +24,7 @@ D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\bin\Debug\DataAccessLayer.dll
 D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\bin\Debug\EntityFramework.dll
 D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\bin\Debug\EntityFramework.SqlServer.dll
 D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\bin\Debug\BusinessAccessLayer.pdb
-D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\bin\Debug\BusinessAccessLayer.dll.config
 D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\bin\Debug\DataAccessLayer.pdb
-D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\bin\Debug\DataAccessLayer.dll.config
 D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\bin\Debug\EntityFramework.xml
 D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\bin\Debug\EntityFramework.SqlServer.xml
 D:\Workspace\WF_EF6\Winform_LibraryManagement_EF6\obj\Debug\Winform_.CAB00E17.Up2Date

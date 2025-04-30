@@ -10,7 +10,6 @@ D:\Workspace\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.
 D:\Workspace\DataAccessLayer\obj\Debug\DataAcce.E67BD773.Up2Date
 D:\Workspace\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 D:\Workspace\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
-D:\Workspace\WF_EF6\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
 D:\Workspace\WF_EF6\DataAccessLayer\bin\Debug\DataAccessLayer.dll
 D:\Workspace\WF_EF6\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
 D:\Workspace\WF_EF6\DataAccessLayer\bin\Debug\EntityFramework.dll
