@@ -51,49 +51,41 @@ namespace Winform_LibraryManagement_EF6
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    int maPhieu = Convert.ToInt32(txtMaPhieu.Text.ToString());
-            //    DateTime NgayMuon = dtpNgayMuon.Value;
-            //    DateTime HanTra = dtpHanTra.Value;
-            //    int soLuong = Convert.ToInt32(nudSoLuong.Value);
-            //    string trangThai = cmbTrangThai.SelectedItem.ToString();
-            //    DateTime? ngayTraThucTe = null;
-            //    if (trangThai == "Đang mượn" || trangThai == "Quá hạn")
-            //    {
-            //        ngayTraThucTe = null;
-            //    }
-            //    else
-            //    {
-            //        if (dtpNgayTraThucTe.Checked)
-            //        {
-            //            ngayTraThucTe = dtpNgayTraThucTe.Value;
-            //        }
-            //    }
+            try
+            {
+                
+                _phieuMuonHienTai.NgayMuon = dtpNgayMuon.Value;
+                _phieuMuonHienTai.HanTra = dtpHanTra.Value;
+                _phieuMuonHienTai.SoLuong = Convert.ToInt32(nudSoLuong.Value);
+                _phieuMuonHienTai.TrangThai = cmbTrangThai.SelectedItem.ToString();
+                DateTime? ngayTraThucTe = null;
+                if (_phieuMuonHienTai.TrangThai == "Đang mượn" || _phieuMuonHienTai.TrangThai == "Quá hạn")
+                {
+                    ngayTraThucTe = null;
+                }
+                else
+                {
+                    if (dtpNgayTraThucTe.Checked)
+                    {
+                        ngayTraThucTe = dtpNgayTraThucTe.Value;
+                    }
+                }
+
+                _phieuMuonHienTai.NgayTraThucTe = ngayTraThucTe;
 
 
-            //    string err = "";
-            //    bool success = dblar.SuaPhieuMuon(ref err, maPhieu, NgayMuon, HanTra,
-            //        ngayTraThucTe, trangThai, soLuong);
+                _phieuMuonService.UpdatePhieuMuon(_phieuMuonHienTai);
 
-            //    if (success)
-            //    {
-            //        MessageBox.Show("Cập nhật thông tin phiếu mượn thành công!", "Thông báo",
-            //            MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        DialogResult = DialogResult.OK;
-            //        this.Close();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Lỗi khi cập nhật thông tin phiếu mượn: " + err, "Lỗi",
-            //            MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Lỗi: " + ex.Message, "Lỗi",
-            //        MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+                    MessageBox.Show("Cập nhật thông tin phiếu mượn thành công!", "Thông báo",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DialogResult = DialogResult.OK;
+                    this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi cập nhật thông tin phiếu mượn: " + ex.Message, "Lỗi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void FormEditLoansAndReturns_Load(object sender, EventArgs e)

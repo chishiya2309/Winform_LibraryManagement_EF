@@ -160,47 +160,35 @@ namespace Winform_LibraryManagement_EF6
 
         private void btnDeleteLAR_Click(object sender, EventArgs e)
         {
-            //if (larGridView.SelectedRows.Count == 0)
-            //{
-            //    MessageBox.Show("Vui lòng phiếu mượn cần xóa!", "Thông báo",
-            //        MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    return;
-            //}
+            if (larGridView.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng phiếu mượn cần xóa!", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
 
-            //try
-            //{
-            //    // Lấy dòng đã chọn
-            //    DataGridViewRow selectedRow = larGridView.SelectedRows[0];
-            //    // Lấy mã phiếu mượn cần xóa
-            //    int maPhieu = (int)selectedRow.Cells["MaPhieu"].Value;
+            try
+            {
+                // Lấy dòng đã chọn
+                DataGridViewRow selectedRow = larGridView.SelectedRows[0];
+                // Lấy mã phiếu mượn cần xóa
+                int maPhieu = Convert.ToInt32(selectedRow.Cells["MaPhieu"].Value);
 
-            //    DialogResult result = MessageBox.Show($"Bạn có chắc muốn xóa phiếu mượn '{maPhieu}'?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            //    if (result == DialogResult.Yes)
-            //    {
-            //        string err = "";
-            //        // Thực hiện xóa phiếu mượn từ cơ sở dữ liệu
-            //        bool success = dBLAR.XoaPhieuMuon(ref err, maPhieu);
-
-            //        if (success)
-            //        {
-            //            // Cập nhật dữ liệu trong DataGridView sau khi xóa
-            //            LoadData();
-
-            //            MessageBox.Show($"Đã xóa phiếu mượn '{maPhieu}' thành công!", "Thông báo",
-            //                MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        }
-            //        else
-            //        {
-            //            MessageBox.Show("Không thể xóa phiếu mượn này!", "Lỗi",
-            //                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //        }
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Lỗi khi xóa phiếu mượn: " + ex.Message, "Lỗi",
-            //        MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+                DialogResult result = MessageBox.Show($"Bạn có chắc muốn xóa phiếu mượn '{maPhieu}'?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    _phieuMuonService.DeletePhieuMuon(maPhieu);
+                    MessageBox.Show($"Đã xóa phiếu mượn '{maPhieu}' thành công!", "Thông báo",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Cập nhật dữ liệu trong DataGridView sau khi xóa
+                    LoadData();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi xóa phiếu mượn: " + ex.Message, "Lỗi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void larGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

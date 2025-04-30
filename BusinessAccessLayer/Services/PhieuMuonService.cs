@@ -119,23 +119,76 @@ namespace BusinessAccessLayer.Services
         public void UpdatePhieuMuon(PhieuMuon phieuMuon)
         {
             if (phieuMuon == null)
-                throw new ArgumentNullException("phieuMuon");
+                throw new ArgumentNullException(nameof(phieuMuon));
 
             var phieuMuonHienTai = _unitOfWork.PhieuMuonRepository.GetById(phieuMuon.MaPhieu);
             if (phieuMuonHienTai == null)
                 throw new Exception("Không tìm thấy phiếu mượn cần cập nhật.");
 
-            // Nếu thay đổi số lượng, cập nhật số lượng sách khả dụng
-            if (phieuMuon.SoLuong != phieuMuonHienTai.SoLuong)
+            // Lưu thông tin cũ để so sánh
+            string trangThaiCu = phieuMuonHienTai.TrangThai;
+            int soLuongCu = phieuMuonHienTai.SoLuong;
+
+            // Kiểm tra giới hạn số lượng sách mượn
+            if (phieuMuon.TrangThai == "Đang mượn" || phieuMuon.TrangThai == "Quá hạn")
+            {
+                // Tính tổng số sách đang mượn (không tính phiếu hiện tại)
+                int tongSachDangMuon = _unitOfWork.PhieuMuonRepository
+                    .Find(p => p.MaThanhVien == phieuMuon.MaThanhVien &&
+                             p.MaPhieu != phieuMuon.MaPhieu &&
+                             (p.TrangThai == "Đang mượn" || p.TrangThai == "Quá hạn"))
+                    .Sum(p => p.SoLuong);
+
+                // Nếu tổng số sách đang mượn + số lượng mới > 5
+                if (tongSachDangMuon + phieuMuon.SoLuong > 5)
+                    throw new Exception($"Thành viên đã mượn {tongSachDangMuon} cuốn, không thể mượn thêm {phieuMuon.SoLuong} cuốn nữa! Tối đa là 5 cuốn.");
+            }
+
+
+            // Cập nhật thông tin phiếu mượn
+            phieuMuonHienTai.MaThanhVien = phieuMuon.MaThanhVien;
+            phieuMuonHienTai.NgayMuon = phieuMuon.NgayMuon;
+            phieuMuonHienTai.HanTra = phieuMuon.HanTra;
+            phieuMuonHienTai.NgayTraThucTe = phieuMuon.NgayTraThucTe;
+            phieuMuonHienTai.TrangThai = phieuMuon.TrangThai;
+            phieuMuonHienTai.SoLuong = phieuMuon.SoLuong;
+
+            // Kiểm tra ngày trả thực tế
+            if (phieuMuonHienTai.NgayTraThucTe.HasValue && phieuMuonHienTai.NgayTraThucTe.Value < phieuMuonHienTai.NgayMuon)
+                throw new Exception("Ngày trả thực tế phải lớn hơn hoặc bằng ngày mượn!");
+
+            // Kiểm tra hạn trả
+            if (phieuMuonHienTai.HanTra < phieuMuonHienTai.NgayMuon)
+                throw new Exception("Hạn trả phải lớn hơn hoặc bằng ngày mượn!");
+
+            // Cập nhật số lượng sách khả dụng nếu có thay đổi trạng thái hoặc số lượng
+            if (trangThaiCu != phieuMuon.TrangThai || soLuongCu != phieuMuon.SoLuong)
             {
                 var sach = _unitOfWork.SachRepository.GetById(phieuMuon.MaSach);
                 if (sach != null)
                 {
-                    int chenhLech = phieuMuonHienTai.SoLuong - phieuMuon.SoLuong;
-                    sach.KhaDung += chenhLech;
-
-                    if (sach.KhaDung < 0)
-                        throw new Exception("Số lượng sách không đủ để cho mượn thêm.");
+                    // Nếu trạng thái từ "Đang mượn" hoặc "Quá hạn" sang "Đã trả"
+                    if ((trangThaiCu == "Đang mượn" || trangThaiCu == "Quá hạn") && phieuMuon.TrangThai == "Đã trả")
+                    {
+                        sach.KhaDung += soLuongCu;
+                    }
+                    // Nếu trạng thái từ "Đã trả" sang "Đang mượn" hoặc "Quá hạn"
+                    else if (trangThaiCu == "Đã trả" && (phieuMuon.TrangThai == "Đang mượn" || phieuMuon.TrangThai == "Quá hạn"))
+                    {
+                        if (sach.KhaDung < phieuMuon.SoLuong)
+                            throw new Exception("Số lượng sách không đủ để cho mượn!");
+                        sach.KhaDung -= phieuMuon.SoLuong;
+                    }
+                    // Nếu chỉ thay đổi số lượng trong cùng trạng thái "Đang mượn" hoặc "Quá hạn"
+                    else if ((trangThaiCu == "Đang mượn" || trangThaiCu == "Quá hạn") &&
+                            (phieuMuon.TrangThai == "Đang mượn" || phieuMuon.TrangThai == "Quá hạn") &&
+                            soLuongCu != phieuMuon.SoLuong)
+                    {
+                        int chenhLech = soLuongCu - phieuMuon.SoLuong;
+                        sach.KhaDung += chenhLech;
+                        if (sach.KhaDung < 0)
+                            throw new Exception("Số lượng sách không đủ để cho mượn thêm!");
+                    }
 
                     _unitOfWork.SachRepository.Update(sach);
                 }
@@ -143,9 +196,9 @@ namespace BusinessAccessLayer.Services
 
             // Cập nhật trạng thái dựa vào hạn trả
             if (phieuMuon.HanTra < DateTime.Now && phieuMuon.TrangThai == "Đang mượn")
-                phieuMuon.TrangThai = "Quá hạn";
+                phieuMuonHienTai.TrangThai = "Quá hạn";
 
-            _unitOfWork.PhieuMuonRepository.Update(phieuMuon);
+            _unitOfWork.PhieuMuonRepository.Update(phieuMuonHienTai);
             _unitOfWork.Save();
         }
 
@@ -154,8 +207,8 @@ namespace BusinessAccessLayer.Services
             var phieuMuon = _unitOfWork.PhieuMuonRepository.GetById(maPhieu);
             if (phieuMuon != null)
             {
-                // Nếu phiếu mượn đang trong trạng thái "Đang mượn", cập nhật lại số lượng sách
-                if (phieuMuon.TrangThai == "Đang mượn")
+                // Nếu phiếu mượn đang trong trạng thái "Đang mượn" hoặc "Quá hạn", cập nhật lại số lượng sách
+                if (phieuMuon.TrangThai == "Đang mượn" || phieuMuon.TrangThai == "Quá hạn")
                 {
                     var sach = _unitOfWork.SachRepository.GetById(phieuMuon.MaSach);
                     if (sach != null)
