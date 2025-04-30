@@ -92,9 +92,9 @@ namespace Winform_LibraryManagement_EF6
                 case "Danh sách phiếu mượn quá hạn":
                     reportControl = new AdminControl_PhieuMuonQuaHan();
                     break;
-                //case "Lịch sử mượn sách của thành viên cụ thể":
-                //    reportControl = new AdminControl_MemberLoanHistory();
-                //    break;
+                case "Lịch sử mượn sách của thành viên cụ thể":
+                    reportControl = new AdminControl_MemberLoanHistory();
+                    break;
                 //case "Top thành viên đang mượn nhiều sách nhất":
                 //    reportControl = new AdminControl_TopBorrowers();
                 //    break;

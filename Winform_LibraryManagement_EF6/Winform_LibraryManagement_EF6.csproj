@@ -106,7 +106,9 @@
     <Compile Include="AdminControl_Member.Designer.cs">
       <DependentUpon>AdminControl_Member.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminControl_MemberLoanHistory.cs" />
+    <Compile Include="AdminControl_MemberLoanHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="AdminControl_MemberLoanHistory.Designer.cs">
       <DependentUpon>AdminControl_MemberLoanHistory.cs</DependentUpon>
     </Compile>

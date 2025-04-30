@@ -281,5 +281,23 @@ namespace BusinessAccessLayer.Services
                 p.MaThanhVien == maThanhVien && p.TrangThai == "Đang mượn")
                 .Sum(p => p.SoLuong);
         }
+
+        public IEnumerable<PhieuMuonDTO> GetLichSuMuonTheoThanhVien(string maThanhVien)
+        {
+            return _unitOfWork.PhieuMuonRepository
+                .Find(p => p.MaThanhVien == maThanhVien)
+                .OrderByDescending(p => p.NgayMuon)
+                .Select(p => new PhieuMuonDTO
+                {
+                    MaPhieu = p.MaPhieu,
+                    MaThanhVien = p.MaThanhVien,
+                    MaSach = p.MaSach,
+                    NgayMuon = p.NgayMuon,
+                    HanTra = p.HanTra,
+                    NgayTraThucTe = p.NgayTraThucTe,
+                    TrangThai = p.TrangThai,
+                    SoLuong = p.SoLuong
+                });
+        }
     }
 }

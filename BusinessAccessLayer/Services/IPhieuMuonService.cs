@@ -19,5 +19,7 @@ namespace BusinessAccessLayer.Services
         void TraSach(PhieuMuon phieuMuon);
         IEnumerable<PhieuMuonDTO> GetPhieuMuonQuaHanDTO();
         int CountSachByThanhVien(string maThanhVien);
+
+        IEnumerable<PhieuMuonDTO> GetLichSuMuonTheoThanhVien(string maThanhVien);
     }
 }
