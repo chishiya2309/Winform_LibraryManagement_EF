@@ -258,10 +258,21 @@ namespace BusinessAccessLayer.Services
             _unitOfWork.Save();
         }
 
-        public IEnumerable<PhieuMuon> GetPhieuMuonQuaHan()
+        public IEnumerable<PhieuMuonDTO> GetPhieuMuonQuaHanDTO()
         {
-            return _unitOfWork.PhieuMuonRepository.Find(p =>
-                p.HanTra < DateTime.Now && p.TrangThai == "Đang mượn");
+            return _unitOfWork.PhieuMuonRepository
+                .Find(p => p.HanTra < DateTime.Now &&
+                          (p.TrangThai == "Đang mượn" || p.TrangThai == "Quá hạn"))
+                .Select(p => new PhieuMuonDTO
+                {
+                    MaPhieu = p.MaPhieu,
+                    MaThanhVien = p.MaThanhVien,
+                    MaSach = p.MaSach,
+                    NgayMuon = p.NgayMuon,
+                    HanTra = p.HanTra,
+                    TrangThai = p.TrangThai,
+                    SoLuong = p.SoLuong
+                });
         }
 
         public int CountSachByThanhVien(string maThanhVien)

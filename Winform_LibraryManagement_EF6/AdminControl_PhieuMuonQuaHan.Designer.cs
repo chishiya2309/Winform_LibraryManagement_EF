@@ -29,17 +29,29 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.lblNoData = new System.Windows.Forms.Label();
             this.larGridView = new System.Windows.Forms.DataGridView();
             this.MaPhieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaThanhVien = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.NgayMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HanTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayTraThucTe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaSach = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayTraThucTe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.larGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // lblNoData
+            // 
+            this.lblNoData.AutoSize = true;
+            this.lblNoData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoData.ForeColor = System.Drawing.Color.Green;
+            this.lblNoData.Location = new System.Drawing.Point(41, 292);
+            this.lblNoData.Name = "lblNoData";
+            this.lblNoData.Size = new System.Drawing.Size(254, 21);
+            this.lblNoData.TabIndex = 8;
+            this.lblNoData.Text = "Không có phiếu mượn nào quá hạn";
             // 
             // larGridView
             // 
@@ -57,10 +69,10 @@
             this.MaThanhVien,
             this.NgayMuon,
             this.HanTra,
-            this.NgayTraThucTe,
             this.TrangThai,
             this.MaSach,
-            this.SoLuong});
+            this.SoLuong,
+            this.NgayTraThucTe});
             this.larGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.larGridView.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.larGridView.Location = new System.Drawing.Point(0, 0);
@@ -107,13 +119,6 @@
             this.HanTra.Name = "HanTra";
             this.HanTra.ReadOnly = true;
             // 
-            // NgayTraThucTe
-            // 
-            this.NgayTraThucTe.DataPropertyName = "NgayTraThucTe";
-            this.NgayTraThucTe.HeaderText = "Ngày trả thực tế";
-            this.NgayTraThucTe.Name = "NgayTraThucTe";
-            this.NgayTraThucTe.ReadOnly = true;
-            // 
             // TrangThai
             // 
             this.TrangThai.DataPropertyName = "TrangThai";
@@ -137,28 +142,38 @@
             this.SoLuong.Name = "SoLuong";
             this.SoLuong.ReadOnly = true;
             // 
+            // NgayTraThucTe
+            // 
+            this.NgayTraThucTe.DataPropertyName = "NgayTraThucTe";
+            this.NgayTraThucTe.HeaderText = "Ngày trả thực tế";
+            this.NgayTraThucTe.Name = "NgayTraThucTe";
+            this.NgayTraThucTe.ReadOnly = true;
+            this.NgayTraThucTe.Visible = false;
+            // 
             // AdminControl_PhieuMuonQuaHan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblNoData);
             this.Controls.Add(this.larGridView);
             this.Name = "AdminControl_PhieuMuonQuaHan";
             this.Size = new System.Drawing.Size(523, 604);
             ((System.ComponentModel.ISupportInitialize)(this.larGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
+        private System.Windows.Forms.Label lblNoData;
         private System.Windows.Forms.DataGridView larGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaPhieu;
         private System.Windows.Forms.DataGridViewComboBoxColumn MaThanhVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayMuon;
         private System.Windows.Forms.DataGridViewTextBoxColumn HanTra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayTraThucTe;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
         private System.Windows.Forms.DataGridViewComboBoxColumn MaSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayTraThucTe;
     }
 }
