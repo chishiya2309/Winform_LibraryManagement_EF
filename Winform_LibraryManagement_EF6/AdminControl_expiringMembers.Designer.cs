@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.membersGridView = new System.Windows.Forms.DataGridView();
             this.MaThanhVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,12 +40,14 @@
             this.NgayDangKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayHetHan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblNoData = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.membersGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblNoData);
             this.panel1.Controls.Add(this.membersGridView);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -59,8 +61,8 @@
             this.membersGridView.AllowUserToDeleteRows = false;
             this.membersGridView.AllowUserToResizeColumns = false;
             this.membersGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.membersGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.membersGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.membersGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.membersGridView.BackgroundColor = System.Drawing.Color.White;
             this.membersGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -153,6 +155,17 @@
             this.TrangThai.Name = "TrangThai";
             this.TrangThai.ReadOnly = true;
             // 
+            // lblNoData
+            // 
+            this.lblNoData.AutoSize = true;
+            this.lblNoData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoData.ForeColor = System.Drawing.Color.Green;
+            this.lblNoData.Location = new System.Drawing.Point(66, 202);
+            this.lblNoData.Name = "lblNoData";
+            this.lblNoData.Size = new System.Drawing.Size(440, 21);
+            this.lblNoData.TabIndex = 7;
+            this.lblNoData.Text = "Không có thành viên nào sắp hết hạn (trong vòng 30 ngày tới)";
+            // 
             // AdminControl_expiringMembers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,6 +174,7 @@
             this.Name = "AdminControl_expiringMembers";
             this.Size = new System.Drawing.Size(545, 425);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.membersGridView)).EndInit();
             this.ResumeLayout(false);
 
@@ -179,5 +193,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayDangKy;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayHetHan;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
+        private System.Windows.Forms.Label lblNoData;
     }
 }

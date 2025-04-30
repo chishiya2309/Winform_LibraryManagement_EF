@@ -106,27 +106,19 @@
     <Compile Include="AdminControl_Member.Designer.cs">
       <DependentUpon>AdminControl_Member.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminControl_MemberLoanHistory.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="AdminControl_MemberLoanHistory.cs" />
     <Compile Include="AdminControl_MemberLoanHistory.Designer.cs">
       <DependentUpon>AdminControl_MemberLoanHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminControl_membersChart.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="AdminControl_membersChart.cs" />
     <Compile Include="AdminControl_membersChart.Designer.cs">
       <DependentUpon>AdminControl_membersChart.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminControl_PhieuMuonQuaHan.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="AdminControl_PhieuMuonQuaHan.cs" />
     <Compile Include="AdminControl_PhieuMuonQuaHan.Designer.cs">
       <DependentUpon>AdminControl_PhieuMuonQuaHan.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminControl_PopularBooks.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="AdminControl_PopularBooks.cs" />
     <Compile Include="AdminControl_PopularBooks.Designer.cs">
       <DependentUpon>AdminControl_PopularBooks.cs</DependentUpon>
     </Compile>
@@ -136,9 +128,7 @@
     <Compile Include="AdminControl_Reports.Designer.cs">
       <DependentUpon>AdminControl_Reports.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminControl_ReturnRateStats.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="AdminControl_ReturnRateStats.cs" />
     <Compile Include="AdminControl_ReturnRateStats.Designer.cs">
       <DependentUpon>AdminControl_ReturnRateStats.cs</DependentUpon>
     </Compile>
@@ -148,15 +138,11 @@
     <Compile Include="AdminControl_Staff.Designer.cs">
       <DependentUpon>AdminControl_Staff.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminControl_ThongKeSachMuon.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="AdminControl_ThongKeSachMuon.cs" />
     <Compile Include="AdminControl_ThongKeSachMuon.Designer.cs">
       <DependentUpon>AdminControl_ThongKeSachMuon.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminControl_TopBorrowers.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="AdminControl_TopBorrowers.cs" />
     <Compile Include="AdminControl_TopBorrowers.Designer.cs">
       <DependentUpon>AdminControl_TopBorrowers.cs</DependentUpon>
     </Compile>

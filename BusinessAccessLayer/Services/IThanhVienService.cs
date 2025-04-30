@@ -16,5 +16,6 @@ namespace BusinessAccessLayer.Services
         bool EmailExists(string email);
         bool SoDienThoaiExists(string soDienThoai);
         IEnumerable<PhieuMuon> GetPhieuMuonByThanhVien(string maThanhVien);
+        IEnumerable<ThanhVien> GetThanhVienSapHetHan(int days);
     }
 }

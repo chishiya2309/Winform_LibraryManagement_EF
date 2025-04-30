@@ -147,5 +147,13 @@ namespace BusinessAccessLayer.Services
         {
             return _unitOfWork.ThanhVienRepository.GetAll();
         }
+
+        public IEnumerable<ThanhVien> GetThanhVienSapHetHan(int days)
+        {
+            var targetDate = DateTime.Now.AddDays(days);
+            return _unitOfWork.ThanhVienRepository.Find(t =>
+                t.NgayHetHan < targetDate &&
+                t.TrangThai == "Hoạt động");
+        }
     }
 }

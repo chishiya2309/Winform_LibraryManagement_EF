@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Winform_LibraryManagement_EF6
@@ -69,21 +63,6 @@ namespace Winform_LibraryManagement_EF6
         {
             GenerateReport(reportTypeList.SelectedItem?.ToString(), reportPreviewPanel);
         }
-
-        private void btnExportPDF_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnExportExcel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPrint_Click(object sender, EventArgs e)
-        {
-
-        }
         // Tạo báo cáo 
         private void GenerateReport(string reportType, Panel previewPanel)
         {
@@ -107,27 +86,27 @@ namespace Winform_LibraryManagement_EF6
                 case "Danh sách thành viên sắp hết hạn":
                     reportControl = new AdminControl_expiringMembers();
                     break;
-                case "Thống kê số lượng thành viên theo loại":
-                    reportControl = new AdminControl_membersChart();
-                    break;
-                case "Danh sách phiếu mượn quá hạn":
-                    reportControl = new AdminControl_PhieuMuonQuaHan();
-                    break;
-                case "Lịch sử mượn sách của thành viên cụ thể":
-                    reportControl = new AdminControl_MemberLoanHistory();
-                    break;
-                case "Top thành viên đang mượn nhiều sách nhất":
-                    reportControl = new AdminControl_TopBorrowers();
-                    break;
-                case "Top sách phổ biến nhất":
-                    reportControl = new AdminControl_PopularBooks();
-                    break;
-                case "Thống kê sách mượn":
-                    reportControl = new AdminControl_ThongKeSachMuon();
-                    break;
-                case "Tỷ lệ trả sách đúng/quá hạn":
-                    reportControl = new AdminControl_ReturnRateStats();
-                    break;
+                //case "Thống kê số lượng thành viên theo loại":
+                //    reportControl = new AdminControl_membersChart();
+                //    break;
+                //case "Danh sách phiếu mượn quá hạn":
+                //    reportControl = new AdminControl_PhieuMuonQuaHan();
+                //    break;
+                //case "Lịch sử mượn sách của thành viên cụ thể":
+                //    reportControl = new AdminControl_MemberLoanHistory();
+                //    break;
+                //case "Top thành viên đang mượn nhiều sách nhất":
+                //    reportControl = new AdminControl_TopBorrowers();
+                //    break;
+                //case "Top sách phổ biến nhất":
+                //    reportControl = new AdminControl_PopularBooks();
+                //    break;
+                //case "Thống kê sách mượn":
+                //    reportControl = new AdminControl_ThongKeSachMuon();
+                //    break;
+                //case "Tỷ lệ trả sách đúng/quá hạn":
+                //    reportControl = new AdminControl_ReturnRateStats();
+                //    break;
                 default:
                     MessageBox.Show("Loại báo cáo không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;

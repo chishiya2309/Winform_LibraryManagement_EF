@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel = new System.Windows.Forms.Panel();
+            this.lblNoData = new System.Windows.Forms.Label();
             this.booksGridView = new System.Windows.Forms.DataGridView();
             this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,7 +42,6 @@
             this.SoBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KhaDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ViTri = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblNoData = new System.Windows.Forms.Label();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.booksGridView)).BeginInit();
             this.SuspendLayout();
@@ -55,14 +55,24 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(650, 310);
             this.panel.TabIndex = 0;
-            this.panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Paint);
+            // 
+            // lblNoData
+            // 
+            this.lblNoData.AutoSize = true;
+            this.lblNoData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoData.ForeColor = System.Drawing.Color.Green;
+            this.lblNoData.Location = new System.Drawing.Point(104, 157);
+            this.lblNoData.Name = "lblNoData";
+            this.lblNoData.Size = new System.Drawing.Size(412, 21);
+            this.lblNoData.TabIndex = 6;
+            this.lblNoData.Text = "Tất cả đầu sách đều có số lượng khả dụng trên từ 3 trở lên";
             // 
             // booksGridView
             // 
             this.booksGridView.AllowUserToAddRows = false;
             this.booksGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.booksGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.booksGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.booksGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.booksGridView.BackgroundColor = System.Drawing.Color.White;
             this.booksGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -163,17 +173,6 @@
             this.ViTri.HeaderText = "Vị trí";
             this.ViTri.Name = "ViTri";
             this.ViTri.ReadOnly = true;
-            // 
-            // lblNoData
-            // 
-            this.lblNoData.AutoSize = true;
-            this.lblNoData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoData.ForeColor = System.Drawing.Color.Green;
-            this.lblNoData.Location = new System.Drawing.Point(104, 157);
-            this.lblNoData.Name = "lblNoData";
-            this.lblNoData.Size = new System.Drawing.Size(412, 21);
-            this.lblNoData.TabIndex = 6;
-            this.lblNoData.Text = "Tất cả đầu sách đều có số lượng khả dụng trên từ 3 trở lên";
             // 
             // AdminControl_LowStockBooks
             // 
