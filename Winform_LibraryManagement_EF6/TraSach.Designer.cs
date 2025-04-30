@@ -36,10 +36,10 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dtpNgayTra = new System.Windows.Forms.DateTimePicker();
-            this.cmbMaPhieu = new System.Windows.Forms.ComboBox();
             this.lblPhieuMuonInfo = new System.Windows.Forms.Label();
             this.lblNgayTraInfo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtMaPhieu = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -128,8 +128,8 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel1.Controls.Add(this.txtMaPhieu, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.dtpNgayTra, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.cmbMaPhieu, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.MaPhieu, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblPhieuMuonInfo, 1, 2);
@@ -161,18 +161,6 @@
             this.dtpNgayTra.Name = "dtpNgayTra";
             this.dtpNgayTra.Size = new System.Drawing.Size(340, 25);
             this.dtpNgayTra.TabIndex = 1;
-            // 
-            // cmbMaPhieu
-            // 
-            this.cmbMaPhieu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbMaPhieu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMaPhieu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbMaPhieu.FormattingEnabled = true;
-            this.cmbMaPhieu.Location = new System.Drawing.Point(171, 27);
-            this.cmbMaPhieu.Name = "cmbMaPhieu";
-            this.cmbMaPhieu.Size = new System.Drawing.Size(340, 25);
-            this.cmbMaPhieu.TabIndex = 0;
-            this.cmbMaPhieu.SelectedIndexChanged += new System.EventHandler(this.cmbMaPhieu_SelectedIndexChanged);
             // 
             // lblPhieuMuonInfo
             // 
@@ -207,6 +195,16 @@
             this.panel1.Size = new System.Drawing.Size(534, 60);
             this.panel1.TabIndex = 9;
             // 
+            // txtMaPhieu
+            // 
+            this.txtMaPhieu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMaPhieu.Enabled = false;
+            this.txtMaPhieu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaPhieu.Location = new System.Drawing.Point(171, 27);
+            this.txtMaPhieu.Name = "txtMaPhieu";
+            this.txtMaPhieu.Size = new System.Drawing.Size(340, 25);
+            this.txtMaPhieu.TabIndex = 5;
+            // 
             // TraSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -222,7 +220,6 @@
             this.Name = "TraSach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Trả sách";
-            this.Load += new System.EventHandler(this.TraSach_Load);
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -243,8 +240,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DateTimePicker dtpNgayTra;
-        private System.Windows.Forms.ComboBox cmbMaPhieu;
         private System.Windows.Forms.Label lblPhieuMuonInfo;
         private System.Windows.Forms.Label lblNgayTraInfo;
+        private System.Windows.Forms.TextBox txtMaPhieu;
     }
 }

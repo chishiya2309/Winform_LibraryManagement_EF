@@ -16,7 +16,7 @@ namespace BusinessAccessLayer.Services
         void AddPhieuMuon(PhieuMuon phieuMuon);
         void UpdatePhieuMuon(PhieuMuon phieuMuon);
         void DeletePhieuMuon(int maPhieu);
-        void TraSach(int maPhieu, DateTime ngayTraThucTe);
+        void TraSach(PhieuMuon phieuMuon);
         IEnumerable<PhieuMuon> GetPhieuMuonQuaHan();
         int CountSachByThanhVien(string maThanhVien);
     }

@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:trasach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|d:\\workspace\\wf_ef6\\winform_librarymanagement_ef6\\trasach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\trasach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:trasach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -15,11 +15,11 @@
       "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:muonsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|d:\\workspace\\wf_ef6\\winform_librarymanagement_ef6\\trasach.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\trasach.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:trasach.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|d:\\workspace\\wf_ef6\\winform_librarymanagement_ef6\\admincontrol_loanandreturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\admincontrol_loanandreturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:admincontrol_loanandreturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -336,8 +336,7 @@
               "RelativeToolTip": "TraSach.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T09:49:46.932Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T09:49:46.932Z"
             },
             {
               "$type": "Document",
@@ -347,7 +346,7 @@
               "RelativeDocumentMoniker": "TraSach.cs",
               "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\TraSach.cs",
               "RelativeToolTip": "TraSach.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAiwG4AAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowBsAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-27T09:46:38.807Z",
               "EditorCaption": ""
@@ -361,8 +360,7 @@
               "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\TraSach.cs [Design]",
               "RelativeToolTip": "TraSach.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T09:46:34.026Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-27T09:46:34.026Z"
             },
             {
               "$type": "Document",
@@ -374,8 +372,7 @@
               "RelativeToolTip": "AdminControl_LoanAndReturn.cs",
               "ViewState": "AgIAADsAAAAAAAAAAAAIwE8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T00:17:28.841Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T00:17:28.841Z"
             },
             {
               "$type": "Document",
@@ -386,8 +383,7 @@
               "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\MuonSach.cs [Design]",
               "RelativeToolTip": "MuonSach.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T08:01:58.033Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-27T08:01:58.033Z"
             },
             {
               "$type": "Document",
@@ -398,8 +394,7 @@
               "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminControl_Categories.cs [Design]",
               "RelativeToolTip": "AdminControl_Categories.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T06:44:48.707Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-16T06:44:48.707Z"
             },
             {
               "$type": "Document",
@@ -410,8 +405,7 @@
               "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminControl_Member.cs [Design]",
               "RelativeToolTip": "AdminControl_Member.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T14:31:18.539Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-26T14:31:18.539Z"
             },
             {
               "$type": "Document",
@@ -422,8 +416,7 @@
               "ToolTip": "D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\AdminControl_LoanAndReturn.cs [Design]",
               "RelativeToolTip": "AdminControl_LoanAndReturn.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T00:14:55.097Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-27T00:14:55.097Z"
             },
             {
               "$type": "Document",
@@ -576,8 +569,7 @@
               "RelativeToolTip": "AdminControl_Member.cs",
               "ViewState": "AgIAAB0BAAAAAAAAAAAmwDQBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T14:29:26.831Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-26T14:29:26.831Z"
             },
             {
               "$type": "Document",
@@ -589,8 +581,7 @@
               "RelativeToolTip": "AdminControl_Member.Designer.cs",
               "ViewState": "AgIAAKgBAAAAAAAAAAAAwMABAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T16:05:55.688Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-26T16:05:55.688Z"
             },
             {
               "$type": "Document",
@@ -954,8 +945,7 @@
               "RelativeToolTip": "AdminControl_Categories.Designer.cs",
               "ViewState": "AgIAAEYAAAAAAAAAAAAYwFIAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T06:45:06.471Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-16T06:45:06.471Z"
             },
             {
               "$type": "Document",
@@ -1015,8 +1005,7 @@
               "RelativeToolTip": "App.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-04-16T03:52:46.801Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-16T03:52:46.801Z"
             },
             {
               "$type": "Document",

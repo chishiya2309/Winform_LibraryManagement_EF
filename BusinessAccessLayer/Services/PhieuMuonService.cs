@@ -170,28 +170,38 @@ namespace BusinessAccessLayer.Services
             }
         }
 
-        public void TraSach(int maPhieu, DateTime ngayTraThucTe)
+        public void TraSach(PhieuMuon phieuMuon)
         {
-            var phieuMuon = _unitOfWork.PhieuMuonRepository.GetById(maPhieu);
             if (phieuMuon == null)
-                throw new Exception("Không tìm thấy phiếu mượn.");
+                throw new ArgumentNullException(nameof(phieuMuon));
 
-            if (phieuMuon.TrangThai == "Đã trả")
-                throw new Exception("Phiếu mượn này đã được trả sách.");
+            // Lấy thông tin phiếu mượn hiện tại
+            var phieuMuonHienTai = _unitOfWork.PhieuMuonRepository.GetById(phieuMuon.MaPhieu);
+            if (phieuMuonHienTai == null)
+                throw new Exception("Phiếu mượn không tồn tại!");
 
-            // Cập nhật thông tin phiếu mượn
-            phieuMuon.NgayTraThucTe = ngayTraThucTe;
-            phieuMuon.TrangThai = "Đã trả";
+            // Kiểm tra trạng thái phiếu mượn
+            if (phieuMuonHienTai.TrangThai != "Đang mượn" && phieuMuonHienTai.TrangThai != "Quá hạn")
+                throw new Exception("Phiếu mượn không ở trạng thái cho phép trả sách!");
+
+            // Kiểm tra ngày trả phải lớn hơn ngày mượn
+            if (phieuMuon.NgayTraThucTe < phieuMuonHienTai.NgayMuon)
+                throw new Exception("Ngày trả thực tế phải lớn hơn hoặc bằng ngày mượn!");
+
+            // Cập nhật thông tin trả sách
+            phieuMuonHienTai.NgayTraThucTe = phieuMuon.NgayTraThucTe;
+            phieuMuonHienTai.TrangThai = "Đã trả";
 
             // Cập nhật số lượng sách khả dụng
-            var sach = _unitOfWork.SachRepository.GetById(phieuMuon.MaSach);
+            var sach = _unitOfWork.SachRepository.GetById(phieuMuonHienTai.MaSach);
             if (sach != null)
             {
-                sach.KhaDung += phieuMuon.SoLuong;
+                sach.KhaDung += phieuMuonHienTai.SoLuong;
                 _unitOfWork.SachRepository.Update(sach);
             }
 
-            _unitOfWork.PhieuMuonRepository.Update(phieuMuon);
+            // Cập nhật phiếu mượn và lưu thay đổi
+            _unitOfWork.PhieuMuonRepository.Update(phieuMuonHienTai);
             _unitOfWork.Save();
         }
 

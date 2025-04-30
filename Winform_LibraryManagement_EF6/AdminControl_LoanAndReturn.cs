@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using BusinessAccessLayer.Services;
 using BusinessAccessLayer.DTOs;
 using System.Collections.Generic;
+using DataAccessLayer.Models;
 
 namespace Winform_LibraryManagement_EF6
 {
@@ -50,7 +51,7 @@ namespace Winform_LibraryManagement_EF6
             _sachList = _sachService.GetAllSachDTO().ToList();
             (larGridView.Columns["MaSach"] as DataGridViewComboBoxColumn).DataSource = _sachList;
             (larGridView.Columns["MaSach"] as DataGridViewComboBoxColumn).DisplayMember = "TenSach";
-            (larGridView.Columns["MaSach"] as DataGridViewComboBoxColumn).ValueMember = "MaSach";;
+            (larGridView.Columns["MaSach"] as DataGridViewComboBoxColumn).ValueMember = "MaSach"; ;
 
             _phieuMuonList = _phieuMuonService.GetAllPhieuMuonDTO().ToList();
             larGridView.DataSource = _phieuMuonList;
@@ -70,13 +71,45 @@ namespace Winform_LibraryManagement_EF6
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            using (TraSach form = new TraSach())
+            Return();
+        }
+
+        private void Return()
+        {
+            if (larGridView.SelectedRows.Count == 0)
             {
-                if (form.ShowDialog() == DialogResult.OK)
+                MessageBox.Show("Vui lòng chọn phiếu mượn cần trả sách!", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            try
+            {
+                // Lấy dòng đã chọn
+                DataGridViewRow selectedRow = larGridView.SelectedRows[0];
+                int maPhieuMuon = Convert.ToInt32(selectedRow.Cells["MaPhieu"].Value);
+
+
+                PhieuMuon phieuMuon = _phieuMuonService.GetPhieuMuonById(maPhieuMuon);
+
+                if (phieuMuon != null)
                 {
-                    // Nếu thêm thành công, cập nhật lại dữ liệu
-                    LoadData();
+                    TraSach traSach = new TraSach(phieuMuon);
+                    if (traSach.ShowDialog() == DialogResult.OK)
+                    {
+                        LoadData();
+                    }
                 }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy thông tin phiếu mượn!", "Lỗi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                } 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi xử lý trả sách: " + ex.Message, "Lỗi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -205,7 +238,8 @@ namespace Winform_LibraryManagement_EF6
                 {
                     // Nếu không có từ khóa tìm kiếm, tải lại tất cả dữ liệu
                     _phieuMuonList = _phieuMuonService.GetAllPhieuMuonDTO().ToList();
-                } else
+                }
+                else
                 {
                     // Nếu có từ khóa tìm kiếm, tìm kiếm trong danh sách phiếu mượn
                     var searchResults = _phieuMuonService.SearchPhieuMuon(searchTerm);
