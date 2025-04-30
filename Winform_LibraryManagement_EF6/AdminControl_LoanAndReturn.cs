@@ -115,45 +115,47 @@ namespace Winform_LibraryManagement_EF6
 
         private void btnEditLAR_Click(object sender, EventArgs e)
         {
-            //if (larGridView.SelectedRows.Count == 0)
-            //{
-            //    MessageBox.Show("Vui lòng chọn phiếu mượn cần chỉnh sửa!", "Thông báo",
-            //        MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    return;
-            //}
+            EditSelectedLAR();
+        }
 
-            //try
-            //{
-            //    // Lấy dòng đã chọn
-            //    DataGridViewRow selectedRow = larGridView.SelectedRows[0];
+        private void EditSelectedLAR()
+        {
+            if (larGridView.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn phiếu mượn cần chỉnh sửa!", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
 
-            //    // Lấy mã sách để tìm kiếm trong DataTable
-            //    int maPhieu = (int)selectedRow.Cells["MaPhieu"].Value;
+            try
+            {
+                // Lấy dòng đã chọn
+                DataGridViewRow selectedRow = larGridView.SelectedRows[0];
 
-            //    // Tìm dòng dữ liệu trong DataTable
-            //    DataRow[] rows = dtPhieuMuon.Select($"MaPhieu = '{maPhieu}'");
-            //    if (rows.Length > 0)
-            //    {
-            //        // Tạo và hiển thị form chỉnh sửa với dữ liệu phiếu mượn đã chọn
-            //        FormEditLoansAndReturns form = new FormEditLoansAndReturns(rows[0]);
+                int maPhieuMuon = Convert.ToInt32(selectedRow.Cells["MaPhieu"].Value);
 
-            //        if (form.ShowDialog() == DialogResult.OK)
-            //        {
-            //            // Cập nhật dữ liệu trong DataGridView
-            //            LoadData();
-            //        }
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Không tìm thấy thông tin phiếu mượn!", "Lỗi",
-            //            MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Lỗi khi chỉnh sửa thông tin phiếu mượn: " + ex.Message, "Lỗi",
-            //        MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+                // Lấy phiếu mượn từ service
+                PhieuMuon phieuMuon = _phieuMuonService.GetPhieuMuonById(maPhieuMuon);
+
+                if(phieuMuon != null)
+                {
+                    FormEditLoansAndReturns formEditLoansAndReturns = new FormEditLoansAndReturns(phieuMuon);
+                    if(formEditLoansAndReturns.ShowDialog() == DialogResult.OK)
+                    {
+                        LoadData();
+                    }    
+                }    
+                else
+                {
+                    MessageBox.Show("Không tìm thấy thông tin phiếu mượn!", "Lỗi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi chỉnh sửa thông tin phiếu mượn: " + ex.Message, "Lỗi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnDeleteLAR_Click(object sender, EventArgs e)

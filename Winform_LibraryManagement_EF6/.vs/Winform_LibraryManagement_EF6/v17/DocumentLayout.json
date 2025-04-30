@@ -6,7 +6,7 @@
       "AbsoluteMoniker": "D:0:0:{93083329-7B29-4734-92A5-5E3AAA12DEF8}|..\\BusinessAccessLayer\\BusinessAccessLayer.csproj|d:\\workspace\\wf_ef6\\businessaccesslayer\\services\\phieumuonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|d:\\workspace\\wf_ef6\\winform_librarymanagement_ef6\\trasach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|D:\\Workspace\\WF_EF6\\Winform_LibraryManagement_EF6\\trasach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{281B39A8-B82F-4B55-B347-D107B2B7CDCE}|Winform_LibraryManagement_EF6.csproj|solutionrelative:trasach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -336,8 +336,7 @@
               "RelativeToolTip": "TraSach.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAowBoAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T09:46:38.807Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T09:46:38.807Z"
             },
             {
               "$type": "Document",

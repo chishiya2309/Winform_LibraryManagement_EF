@@ -140,6 +140,12 @@
     <Compile Include="FormEditCategory.Designer.cs">
       <DependentUpon>FormEditCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEditLoansAndReturns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditLoansAndReturns.Designer.cs">
+      <DependentUpon>FormEditLoansAndReturns.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEditMember.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditCategory.resx">
       <DependentUpon>FormEditCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditLoansAndReturns.resx">
+      <DependentUpon>FormEditLoansAndReturns.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditMember.resx">
       <DependentUpon>FormEditMember.cs</DependentUpon>
