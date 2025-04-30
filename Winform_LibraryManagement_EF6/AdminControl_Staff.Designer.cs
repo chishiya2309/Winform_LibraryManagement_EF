@@ -33,6 +33,7 @@ namespace Winform_LibraryManagement_EF6
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.staffPanel = new System.Windows.Forms.Panel();
+            this.lblNoData = new System.Windows.Forms.Label();
             this.MenuButton = new System.Windows.Forms.TableLayoutPanel();
             this.btnAddStaff = new System.Windows.Forms.Button();
             this.btnReload = new System.Windows.Forms.Button();
@@ -57,7 +58,6 @@ namespace Winform_LibraryManagement_EF6
             this.editItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteItem = new System.Windows.Forms.ToolStripMenuItem();
             this.titleLabel = new System.Windows.Forms.Label();
-            this.lblNoData = new System.Windows.Forms.Label();
             this.staffPanel.SuspendLayout();
             this.MenuButton.SuspendLayout();
             this.searchPanel.SuspendLayout();
@@ -79,8 +79,20 @@ namespace Winform_LibraryManagement_EF6
             this.staffPanel.Name = "staffPanel";
             this.staffPanel.Size = new System.Drawing.Size(819, 602);
             this.staffPanel.TabIndex = 0;
-         //   this.staffPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.staffPanel_Paint);
+            this.staffPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.staffPanel_Paint);
             this.staffPanel.Resize += new System.EventHandler(this.staffPanel_Resize);
+            // 
+            // lblNoData
+            // 
+            this.lblNoData.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoData.ForeColor = System.Drawing.Color.Red;
+            this.lblNoData.Location = new System.Drawing.Point(176, 294);
+            this.lblNoData.Name = "lblNoData";
+            this.lblNoData.Size = new System.Drawing.Size(268, 31);
+            this.lblNoData.TabIndex = 22;
+            this.lblNoData.Text = "Không tìm thấy kết quả";
+            this.lblNoData.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNoData.Visible = false;
             // 
             // MenuButton
             // 
@@ -231,8 +243,8 @@ namespace Winform_LibraryManagement_EF6
             this.staffGridView.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.staffGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.staffGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.staffGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.staffGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.staffGridView.BackgroundColor = System.Drawing.Color.White;
@@ -353,18 +365,6 @@ namespace Winform_LibraryManagement_EF6
             this.titleLabel.Size = new System.Drawing.Size(221, 32);
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "Quản lý nhân viên";
-            // 
-            // lblNoData
-            // 
-            this.lblNoData.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoData.ForeColor = System.Drawing.Color.Red;
-            this.lblNoData.Location = new System.Drawing.Point(176, 294);
-            this.lblNoData.Name = "lblNoData";
-            this.lblNoData.Size = new System.Drawing.Size(268, 31);
-            this.lblNoData.TabIndex = 22;
-            this.lblNoData.Text = "Không tìm thấy kết quả";
-            this.lblNoData.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblNoData.Visible = false;
             // 
             // AdminControl_Staff
             // 

@@ -85,7 +85,7 @@ namespace Winform_LibraryManagement_EF6
 
         private void dashboardPanel_Paint(object sender, PaintEventArgs e)
         {
-
+            LoadDashboardData();
         }
 
         private void dashboardPanel_VisibleChanged(object sender, EventArgs e)

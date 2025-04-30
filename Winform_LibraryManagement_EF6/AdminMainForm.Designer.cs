@@ -274,6 +274,7 @@ namespace Winform_LibraryManagement_EF6
             this.btnReports.Text = "Báo cáo và thống kê";
             this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReports.UseVisualStyleBackColor = true;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // btnLogout
             // 

@@ -80,6 +80,7 @@ namespace Winform_LibraryManagement_EF6
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(839, 601);
             this.panel.TabIndex = 0;
+            this.panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Paint);
             this.panel.Resize += new System.EventHandler(this.panel_Resize);
             // 
             // lblNoData

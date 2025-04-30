@@ -158,7 +158,7 @@ namespace Winform_LibraryManagement_EF6
 
         private void panel_Paint(object sender, PaintEventArgs e)
         {
-
+            LoadData();
         }
 
         private void membersGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

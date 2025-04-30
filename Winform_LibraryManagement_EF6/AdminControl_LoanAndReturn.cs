@@ -278,5 +278,10 @@ namespace Winform_LibraryManagement_EF6
         {
 
         }
+
+        private void panel_Paint(object sender, PaintEventArgs e)
+        {
+            LoadData();
+        }
     }
 }

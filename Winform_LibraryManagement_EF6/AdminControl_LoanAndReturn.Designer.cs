@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel = new System.Windows.Forms.Panel();
+            this.lblNoData = new System.Windows.Forms.Label();
             this.MenuButton = new System.Windows.Forms.TableLayoutPanel();
             this.btnLoan = new System.Windows.Forms.Button();
             this.btnDeleteLAR = new System.Windows.Forms.Button();
@@ -56,7 +57,6 @@
             this.editItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteItem = new System.Windows.Forms.ToolStripMenuItem();
             this.titleLabel = new System.Windows.Forms.Label();
-            this.lblNoData = new System.Windows.Forms.Label();
             this.panel.SuspendLayout();
             this.MenuButton.SuspendLayout();
             this.searchPanel.SuspendLayout();
@@ -79,7 +79,19 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(819, 602);
             this.panel.TabIndex = 1;
-           // this.panel.Paint += new System.Windows.Forms.PaintEventHandler(this.staffPanel_Paint);
+            this.panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Paint);
+            // 
+            // lblNoData
+            // 
+            this.lblNoData.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoData.ForeColor = System.Drawing.Color.Red;
+            this.lblNoData.Location = new System.Drawing.Point(178, 321);
+            this.lblNoData.Name = "lblNoData";
+            this.lblNoData.Size = new System.Drawing.Size(268, 31);
+            this.lblNoData.TabIndex = 20;
+            this.lblNoData.Text = "Không tìm thấy kết quả";
+            this.lblNoData.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNoData.Visible = false;
             // 
             // MenuButton
             // 
@@ -189,7 +201,7 @@
             // 
             // searchPanel
             // 
-            this.searchPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.searchPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.searchPanel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.searchPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -252,8 +264,8 @@
             this.larGridView.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.larGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.larGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.larGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.larGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.larGridView.BackgroundColor = System.Drawing.Color.White;
@@ -380,18 +392,6 @@
             this.titleLabel.Size = new System.Drawing.Size(291, 32);
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "Quản lý mượn / trả sách";
-            // 
-            // lblNoData
-            // 
-            this.lblNoData.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoData.ForeColor = System.Drawing.Color.Red;
-            this.lblNoData.Location = new System.Drawing.Point(178, 321);
-            this.lblNoData.Name = "lblNoData";
-            this.lblNoData.Size = new System.Drawing.Size(268, 31);
-            this.lblNoData.TabIndex = 20;
-            this.lblNoData.Text = "Không tìm thấy kết quả";
-            this.lblNoData.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblNoData.Visible = false;
             // 
             // AdminControl_LoanAndReturn
             // 

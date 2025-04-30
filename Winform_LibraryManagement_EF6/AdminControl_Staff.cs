@@ -149,6 +149,7 @@ namespace Winform_LibraryManagement_EF6
         private void staffPanel_Paint(object sender, PaintEventArgs e)
         {
             // Empty event handler
+            LoadData();
         }
 
         private void EditSelectedStaff()
