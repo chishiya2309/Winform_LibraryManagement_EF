@@ -21,5 +21,12 @@ namespace BusinessAccessLayer.Services
         int CountSachByThanhVien(string maThanhVien);
 
         IEnumerable<PhieuMuonDTO> GetLichSuMuonTheoThanhVien(string maThanhVien);
+
+        IEnumerable<TopThanhVienMuonDTO> GetTop5ThanhVienMuonNhieuNhat();
+
+        IEnumerable<TopSachPhoBienDTO> GetTop10SachPhoBien();
+
+        IEnumerable<ThongKeSachMuonTheoThangDTO> GetThongKeSachMuonTheoThang(int? selectedYear = null);
+        IEnumerable<int> GetDanhSachNam();
     }
 }

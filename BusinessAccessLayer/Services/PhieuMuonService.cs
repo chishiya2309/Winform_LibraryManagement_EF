@@ -299,5 +299,113 @@ namespace BusinessAccessLayer.Services
                     SoLuong = p.SoLuong
                 });
         }
+
+        public IEnumerable<TopThanhVienMuonDTO> GetTop5ThanhVienMuonNhieuNhat()
+        {
+            var phieuMuonList = _unitOfWork.PhieuMuonRepository
+                .Find(p => p.TrangThai == "Đang mượn" || p.TrangThai == "Quá hạn");
+
+            var topBorrowers = phieuMuonList
+                .GroupBy(p => p.MaThanhVien)
+                .Select(g => new
+                {
+                    MaThanhVien = g.Key,
+                    TongSoSach = g.Sum(p => p.SoLuong)
+                })
+                .OrderByDescending(x => x.TongSoSach)
+                .Take(5)
+                .ToList();
+
+            int stt = 1;
+            var result = new List<TopThanhVienMuonDTO>();
+
+            foreach (var item in topBorrowers)
+            {
+                var thanhVien = _unitOfWork.ThanhVienRepository.GetById(item.MaThanhVien);
+                string hoTen = thanhVien != null ? thanhVien.HoTen : "Không xác định";
+
+                result.Add(new TopThanhVienMuonDTO
+                {
+                    STT = stt++,
+                    MaThanhVien = item.MaThanhVien,
+                    HoTen = hoTen,
+                    TongSoSach = item.TongSoSach
+                });
+            }
+            return result;
+        }
+
+        public IEnumerable<TopSachPhoBienDTO> GetTop10SachPhoBien()
+        {
+            var phieuMuonList = _unitOfWork.PhieuMuonRepository.GetAll();
+
+            var popularBooks = phieuMuonList
+                .GroupBy(p => p.MaSach)
+                .Select(g => new
+                {
+                    MaSach = g.Key,
+                    SoLanMuon = g.Count()
+                })
+                .OrderByDescending(x => x.SoLanMuon)
+                .Take(10)
+                .ToList();
+
+            int stt = 1;
+            var result = new List<TopSachPhoBienDTO>();
+
+            foreach (var item in popularBooks)
+            {
+                var sach = _unitOfWork.SachRepository.GetById(item.MaSach);
+                string tenSach = sach != null ? sach.TenSach : "Không xác định";
+
+                result.Add(new TopSachPhoBienDTO
+                {
+                    STT = stt++,
+                    MaSach = item.MaSach,
+                    TenSach = tenSach,
+                    SoLanMuon = item.SoLanMuon
+                });
+            }
+
+            return result;
+        }
+
+        public IEnumerable<ThongKeSachMuonTheoThangDTO> GetThongKeSachMuonTheoThang(int? selectedYear = null)
+        {
+            var phieuMuonList = _unitOfWork.PhieuMuonRepository.GetAll();
+
+            var loansByMonth = phieuMuonList
+                .GroupBy(p => new
+                {
+                    Thang = p.NgayMuon.Month,
+                    Nam = p.NgayMuon.Year
+                })
+                .Select(g => new ThongKeSachMuonTheoThangDTO
+                {
+                    Thang = g.Key.Thang,
+                    Nam = g.Key.Nam,
+                    ThangNam = $"{g.Key.Thang}/{g.Key.Nam}",
+                    SoLuongMuon = g.Sum(p => p.SoLuong)
+                })
+                .OrderBy(x => x.Nam)
+                .ThenBy(x => x.Thang)
+                .ToList();
+
+            if (selectedYear.HasValue)
+            {
+                loansByMonth = loansByMonth.Where(x => x.Nam == selectedYear.Value).ToList();
+            }
+
+            return loansByMonth;
+        }
+
+        public IEnumerable<int> GetDanhSachNam()
+        {
+            return _unitOfWork.PhieuMuonRepository.GetAll()
+                .Select(p => p.NgayMuon.Year)
+                .Distinct()
+                .OrderByDescending(y => y)
+                .ToList();
+        }
     }
 }

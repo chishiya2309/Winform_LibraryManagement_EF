@@ -146,6 +146,7 @@
             this.btnDeleteLAR.TabIndex = 12;
             this.btnDeleteLAR.Text = "Xóa phiếu mượn";
             this.btnDeleteLAR.UseVisualStyleBackColor = false;
+            this.btnDeleteLAR.Visible = false;
             this.btnDeleteLAR.Click += new System.EventHandler(this.btnDeleteLAR_Click);
             // 
             // btnEditLAR

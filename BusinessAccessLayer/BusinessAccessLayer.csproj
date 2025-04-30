@@ -49,7 +49,10 @@
     <Compile Include="DTOs\PhieuMuonDTO.cs" />
     <Compile Include="DTOs\SachDTO.cs" />
     <Compile Include="DTOs\ThanhVienDTO.cs" />
+    <Compile Include="DTOs\ThongKeSachMuonTheoThangDTO.cs" />
     <Compile Include="DTOs\ThongKeThanhVienDTO.cs" />
+    <Compile Include="DTOs\TopSachPhoBienDTO.cs" />
+    <Compile Include="DTOs\TopThanhVienMuonDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DanhMucSachService.cs" />
     <Compile Include="Services\IDanhMucSachService.cs" />

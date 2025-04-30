@@ -95,18 +95,18 @@ namespace Winform_LibraryManagement_EF6
                 case "Lịch sử mượn sách của thành viên cụ thể":
                     reportControl = new AdminControl_MemberLoanHistory();
                     break;
-                //case "Top thành viên đang mượn nhiều sách nhất":
-                //    reportControl = new AdminControl_TopBorrowers();
-                //    break;
-                //case "Top sách phổ biến nhất":
-                //    reportControl = new AdminControl_PopularBooks();
-                //    break;
-                //case "Thống kê sách mượn":
-                //    reportControl = new AdminControl_ThongKeSachMuon();
-                //    break;
-                //case "Tỷ lệ trả sách đúng/quá hạn":
-                //    reportControl = new AdminControl_ReturnRateStats();
-                //    break;
+                case "Top thành viên đang mượn nhiều sách nhất":
+                    reportControl = new AdminControl_TopBorrowers();
+                    break;
+                case "Top sách phổ biến nhất":
+                    reportControl = new AdminControl_PopularBooks();
+                    break;
+                case "Thống kê sách mượn":
+                    reportControl = new AdminControl_ThongKeSachMuon();
+                    break;
+                case "Tỷ lệ trả sách đúng/quá hạn":
+                    reportControl = new AdminControl_ReturnRateStats();
+                    break;
                 default:
                     MessageBox.Show("Loại báo cáo không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
