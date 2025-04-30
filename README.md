@@ -1,6 +1,6 @@
 # Hệ Thống Quản Lý Thư Viện
 
-Hệ thống quản lý thư viện hiện đại được phát triển bằng C# Windows Forms và Entity Framework 6. Dự án này là quá trình chuyển đổi từ phương pháp truy cập dữ liệu truyền thống (ADO.NET) sang Entity Framework, mang lại hiệu suất và khả năng bảo trì tốt hơn.
+Hệ thống quản lý thư viện hiện đại được phát triển bằng C# Windows Forms và Entity Framework 6. Dự án này là quá trình chuyển đổi từ phương pháp truy cập dữ liệu truyền thống (ADO.NET) sang Entity Framework 6, mang lại hiệu suất và khả năng bảo trì tốt hơn.
 
 ![Library Management System](https://img.shields.io/badge/C%23-Library%20Management-blue)
 ![EF6](https://img.shields.io/badge/ORM-Entity%20Framework%206-orange)
