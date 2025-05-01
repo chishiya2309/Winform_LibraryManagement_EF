@@ -756,7 +756,7 @@ namespace DataAccessLayer.DAL
                     MaThanhVien = "M0013",
                     NgayMuon = new DateTime(2025, 3, 9),
                     HanTra = new DateTime(2025, 3, 23),
-                    NgayTraThucTe = new DateTime(20),
+                    NgayTraThucTe = new DateTime(2025, 3, 19),
                     TrangThai = "Đã trả",
                     MaSach = "B1008",
                     SoLuong = 1
