@@ -75,6 +75,7 @@ namespace BusinessAccessLayer.Services
             danhMucHienTai.CapNhatLanCuoi = DateTime.Now;
             danhMucHienTai.TrangThai = danhMuc.TrangThai;
 
+            _unitOfWork.DanhMucSachRepository.Update(danhMucHienTai);
             _unitOfWork.Save();
         }
 
