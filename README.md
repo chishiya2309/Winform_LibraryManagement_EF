@@ -80,7 +80,7 @@ git clone https://github.com/chishiya2309/Winform_LibraryManagement_EF.git
 
 2. Mở solution trong Visual Studio
 
-3. Cấu hình connection string trong file `App.config` của tầng UI (sửa lại Data Source cho phù hợp với máy của bạn):
+3. Cấu hình connection string trong file `App.config` của tầng UI (sửa lại connectionString cho phù hợp với máy của bạn):
 ```xml
 <connectionStrings>
 		<add name="QuanLyThuVienContext" connectionString="Data Source=(local)\SQLExpress;Initial Catalog=QuanLyThuVienEF;Integrated Security=True;MultipleActiveResultSets=True" providerName="System.Data.SqlClient" />
